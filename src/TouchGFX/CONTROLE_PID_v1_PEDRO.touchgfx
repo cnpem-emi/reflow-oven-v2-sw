@@ -1,0 +1,640 @@
+{
+  "Application": {
+    "Screens": [
+      {
+        "Name": "Screen1",
+        "CanvasBufferSize": 7200,
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "Width": 480,
+            "Height": 272,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "X": 382,
+            "Y": 16,
+            "Width": 98,
+            "Height": 33,
+            "TextId": "__SingleUse_0DCT",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_9G5M",
+              "UseBuffer": true,
+              "BufferSize": 6
+            }
+          },
+          {
+            "Type": "DynamicGraph",
+            "Name": "dynamicGraph1",
+            "X": 11,
+            "Y": 16,
+            "Width": 383,
+            "Height": 240,
+            "DataSeed": 525763241,
+            "NumberOfValues": 1200,
+            "MaxY": 250.0,
+            "MinY": 10.0,
+            "Precision": "1",
+            "LastIndex": 1199,
+            "XAxisScale": 1.0,
+            "LabelSizeTop": 6,
+            "LabelSizeBottom": 14,
+            "LabelSizeLeft": 55,
+            "LabelSizeRight": 2,
+            "PaddingTop": 3,
+            "PaddingLeft": 9,
+            "PaddingRight": -15,
+            "GraphType": "GraphWrapClear",
+            "GraphDrawers": [
+              {
+                "Type": "LineDrawer",
+                "LineWidth": 2,
+                "Color": {
+                  "Red": 196,
+                  "Green": 22,
+                  "Blue": 22
+                }
+              }
+            ],
+            "XAxisLabel": {
+              "Type": "GraphLabel",
+              "Interval": 200.0,
+              "DecimalSeparator": "Point",
+              "TextColor": {
+                "Red": 255,
+                "Green": 255,
+                "Blue": 255
+              },
+              "TextId": "__SingleUse_WQ6N",
+              "TextRotation": "0",
+              "Position": "Bottom"
+            },
+            "YAxisLabel": {
+              "Type": "GraphLabel",
+              "Interval": 25.0,
+              "NumberOfDecimals": 2,
+              "DecimalSeparator": "Point",
+              "TextColor": {
+                "Red": 255,
+                "Green": 255,
+                "Blue": 255
+              },
+              "TextId": "__SingleUse_3B84",
+              "TextRotation": "0",
+              "Position": "Left"
+            }
+          },
+          {
+            "Type": "StaticGraph",
+            "Name": "graph1",
+            "X": 11,
+            "Y": 16,
+            "Width": 383,
+            "Height": 240,
+            "DataSeed": 1041876867,
+            "NumberOfValues": 4000,
+            "MaxX": 1200.0,
+            "PrecisionX": "1",
+            "MaxY": 250.0,
+            "MinY": 10.0,
+            "PrecisionY": "1",
+            "XAxisScale": 1.0,
+            "LabelSizeTop": 6,
+            "LabelSizeBottom": 14,
+            "LabelSizeLeft": 55,
+            "LabelSizeRight": 2,
+            "PaddingTop": 3,
+            "PaddingLeft": 9,
+            "PaddingRight": -16,
+            "GraphDrawers": [
+              {
+                "Type": "LineDrawer",
+                "LineWidth": 2,
+                "Color": {
+                  "Red": 23,
+                  "Green": 194,
+                  "Blue": 32
+                }
+              }
+            ],
+            "XAxisGrid": {
+              "Type": "GraphGrid",
+              "Color": {
+                "Red": 20,
+                "Green": 151,
+                "Blue": 197
+              },
+              "Interval": 50.0,
+              "LineWidth": 1
+            },
+            "XAxisLabel": {
+              "Type": "GraphLabel",
+              "Interval": 200.0,
+              "DecimalSeparator": "Point",
+              "TextColor": {
+                "Red": 255
+              },
+              "TextId": "__SingleUse_MIZY",
+              "TextRotation": "0",
+              "Position": "Bottom"
+            },
+            "YAxisLabel": {
+              "Type": "GraphLabel",
+              "Interval": 25.0,
+              "NumberOfDecimals": 2,
+              "DecimalSeparator": "Point",
+              "TextColor": {
+                "Red": 255
+              },
+              "TextId": "__SingleUse_YSZ3",
+              "TextRotation": "0",
+              "Position": "Left"
+            },
+            "Moveable": true
+          },
+          {
+            "Type": "ButtonWithIcon",
+            "Name": "play",
+            "X": 402,
+            "Y": 76,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Round_icon_button.png",
+            "Released": "__designer\\Blue_Buttons_Round_icon_button.png",
+            "IconPressed": "__designer\\Blue_Icons_Power_32.png",
+            "IconReleased": "__designer\\Blue_Icons_Power_32.png",
+            "IconX": 16,
+            "IconY": 16,
+            "IconHeight": 29,
+            "IconWidth": 29
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea2",
+            "X": 402,
+            "Y": 49,
+            "Width": 55,
+            "Height": 17,
+            "TextId": "__SingleUse_A9G3",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_2C0T",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "perfil",
+            "X": 401,
+            "Y": 136,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Round_icon_button.png",
+            "Released": "__designer\\Blue_Buttons_Round_icon_button.png",
+            "TextId": "__SingleUse_5A6H",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithIcon",
+            "Name": "Config",
+            "X": 402,
+            "Y": 212,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Round_icon_button.png",
+            "Released": "__designer\\Blue_Buttons_Round_icon_button.png",
+            "IconPressed": "__designer\\Blue_Icons_Settings_32.png",
+            "IconReleased": "__designer\\Blue_Icons_Settings_32.png",
+            "IconX": 15,
+            "IconY": 15,
+            "IconHeight": 30,
+            "IconWidth": 30
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction2",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "perfil"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "profile"
+            }
+          },
+          {
+            "InteractionName": "Interaction3",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "play"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "startReflow"
+            }
+          },
+          {
+            "InteractionName": "Interaction4",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "Config"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Screen2"
+            }
+          }
+        ],
+        "CustomActions": [
+          {
+            "Name": "action1"
+          }
+        ]
+      },
+      {
+        "Name": "Screen2",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "Width": 480,
+            "Height": 272,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "ButtonWithIcon",
+            "Name": "retornar",
+            "X": 420,
+            "Y": 127,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Round_icon_button.png",
+            "Released": "__designer\\Blue_Buttons_Round_icon_button.png",
+            "IconPressed": "__designer\\Blue_Icons_Back_arrow_32.png",
+            "IconReleased": "__designer\\Blue_Icons_Back_arrow_32.png",
+            "IconX": 22,
+            "IconY": 15,
+            "IconHeight": 30,
+            "IconWidth": 17
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "X": 17,
+            "Y": 11,
+            "Width": 228,
+            "Height": 30,
+            "TextId": "__SingleUse_TZMU",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 76,
+              "Green": 207,
+              "Blue": 43
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_1",
+            "X": 20,
+            "Y": 41,
+            "Width": 222,
+            "Height": 29,
+            "TextId": "__SingleUse_YLEF",
+            "TextRotation": "0"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_2",
+            "X": 17,
+            "Y": 143,
+            "Width": 260,
+            "Height": 31,
+            "TextId": "__SingleUse_2Q4Q",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 237,
+              "Green": 24,
+              "Blue": 24
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_1_1_1",
+            "X": 288,
+            "Y": 41,
+            "Width": 120,
+            "Height": 29,
+            "TextId": "__SingleUse_9WQB",
+            "TextRotation": "0"
+          },
+          {
+            "Type": "Box",
+            "Name": "box2",
+            "X": 70,
+            "Y": 70,
+            "Width": 123,
+            "Height": 31,
+            "Color": {
+              "Red": 87,
+              "Green": 143,
+              "Blue": 173
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "box2_1",
+            "X": 287,
+            "Y": 70,
+            "Width": 123,
+            "Height": 31,
+            "Color": {
+              "Red": 87,
+              "Green": 143,
+              "Blue": 173
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea_temperature_patamar1",
+            "X": 101,
+            "Y": 76,
+            "Width": 61,
+            "Height": 18,
+            "TextId": "__SingleUse_ZWSN",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_E0G2",
+              "UseBuffer": true,
+              "BufferSize": 4
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea2_tempo_patamar1",
+            "X": 318,
+            "Y": 76,
+            "Width": 61,
+            "Height": 18,
+            "TextId": "__SingleUse_L7G9",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_8C44",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "Button",
+            "Name": "up_temperature_patamar1",
+            "X": 70,
+            "Y": 110,
+            "Width": 30,
+            "Height": 17,
+            "Pressed": "__designer\\Blue_Icons_Up_arrow_32.png",
+            "Released": "__designer\\Blue_Icons_Up_arrow_32.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "up_tempo_patamar1",
+            "X": 288,
+            "Y": 110,
+            "Width": 30,
+            "Height": 17,
+            "Pressed": "__designer\\Blue_Icons_Up_arrow_32.png",
+            "Released": "__designer\\Blue_Icons_Up_arrow_32.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "down_temperature_patamar1",
+            "X": 162,
+            "Y": 110,
+            "Width": 30,
+            "Height": 17,
+            "Pressed": "__designer\\Blue_Icons_Down_arrow_32.png",
+            "Released": "__designer\\Blue_Icons_Down_arrow_32.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "down_tempo_patamar1",
+            "X": 380,
+            "Y": 110,
+            "Width": 30,
+            "Height": 17,
+            "Pressed": "__designer\\Blue_Icons_Down_arrow_32.png",
+            "Released": "__designer\\Blue_Icons_Down_arrow_32.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_1_1",
+            "X": 15,
+            "Y": 174,
+            "Width": 222,
+            "Height": 29,
+            "TextId": "__SingleUse_CJRQ",
+            "TextRotation": "0"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1_1_1_1_1",
+            "X": 283,
+            "Y": 174,
+            "Width": 120,
+            "Height": 29,
+            "TextId": "__SingleUse_J636",
+            "TextRotation": "0"
+          },
+          {
+            "Type": "Box",
+            "Name": "box2_2",
+            "X": 65,
+            "Y": 203,
+            "Width": 123,
+            "Height": 31,
+            "Color": {
+              "Red": 87,
+              "Green": 143,
+              "Blue": 173
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "box2_1_1",
+            "X": 282,
+            "Y": 203,
+            "Width": 123,
+            "Height": 31,
+            "Color": {
+              "Red": 87,
+              "Green": 143,
+              "Blue": 173
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea2_2",
+            "X": 96,
+            "Y": 209,
+            "Width": 61,
+            "Height": 18,
+            "TextId": "__SingleUse_1JKI",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_T4BR",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea2_1_1",
+            "X": 313,
+            "Y": 209,
+            "Width": 61,
+            "Height": 18,
+            "TextId": "__SingleUse_CF4B",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_31BF",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "Button",
+            "Name": "button1_3",
+            "X": 65,
+            "Y": 243,
+            "Width": 30,
+            "Height": 17,
+            "Pressed": "__designer\\Blue_Icons_Up_arrow_32.png",
+            "Released": "__designer\\Blue_Icons_Up_arrow_32.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "button1_1_1",
+            "X": 283,
+            "Y": 243,
+            "Width": 30,
+            "Height": 17,
+            "Pressed": "__designer\\Blue_Icons_Up_arrow_32.png",
+            "Released": "__designer\\Blue_Icons_Up_arrow_32.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "button1_2_2",
+            "X": 157,
+            "Y": 243,
+            "Width": 30,
+            "Height": 17,
+            "Pressed": "__designer\\Blue_Icons_Down_arrow_32.png",
+            "Released": "__designer\\Blue_Icons_Down_arrow_32.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "button1_2_1_1",
+            "X": 375,
+            "Y": 243,
+            "Width": 30,
+            "Height": 17,
+            "Pressed": "__designer\\Blue_Icons_Down_arrow_32.png",
+            "Released": "__designer\\Blue_Icons_Down_arrow_32.png"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "retornar"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Screen1"
+            }
+          }
+        ]
+      }
+    ],
+    "CustomContainerDefinitions": [],
+    "Name": "CONTROLE_PID_v1_PEDRO",
+    "Resolution": {
+      "Width": 480,
+      "Height": 272
+    },
+    "SelectedColorDepth": 16,
+    "StartupScreenName": "Screen1",
+    "SelectedStartupLanguage": "GB",
+    "Skin": "Blue",
+    "TouchGfxPath": "../Middlewares/ST/touchgfx",
+    "UIPath": ".",
+    "AvailableColorDepths": [
+      16
+    ],
+    "AvailableLCDs": {
+      "16": "LCD16bpp"
+    },
+    "AvailableSections": [
+      "ExtFlashSection",
+      "IntFlashSection"
+    ],
+    "AvailableResolutions": [
+      {
+        "Width": 480,
+        "Height": 272
+      }
+    ],
+    "PhysicalButtons": [],
+    "FrameworkFeatures": {
+      "LCD16bpp": {
+        "Id": "LCD16bpp",
+        "IsEnabled": true
+      }
+    },
+    "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j8",
+    "PostGenerateCommand": "touchgfx update_project --project-file=simulator/msvs/Application.vcxproj",
+    "PostGenerateTargetCommand": "touchgfx update_project",
+    "CompileSimulatorCommand": "make -f simulator/gcc/Makefile -j8",
+    "RunSimulatorCommand": "build\\bin\\simulator.exe",
+    "CompileTargetCommand": "make -f ../gcc/Makefile -j8",
+    "FlashTargetCommand": "make -f ../gcc/Makefile flash -j8",
+    "LandscapeSkinX": 0,
+    "LandscapeSkinY": 0,
+    "PortraitSkinX": 0,
+    "PortraitSkinY": 0,
+    "DisplayOrientation": "Landscape",
+    "Family": "STM32F7",
+    "Platform": "m7",
+    "ProjectFile": "../STM32F746G_DISCO.ioc",
+    "OptionalComponentsRoot": "../Middlewares/ST/touchgfx_components",
+    "OptionalComponents": []
+  },
+  "Version": "4.19.0",
+  "CreatedBy": "4.19.0"
+}

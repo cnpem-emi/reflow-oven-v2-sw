@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextDatabase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="texts.xsd" Version="4.19.0">
+  <Languages>
+    <Language Id="GB" />
+  </Languages>
+  <Texts>
+    <TextGroup Id="Group1" />
+    <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_31BF" Alignment="Left" TypographyId="temp">
+        <Translation Language="GB">000</Translation>
+      </Text>
+      <Text Id="__SingleUse_CF4B" Alignment="Center" TypographyId="temp">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_T4BR" Alignment="Left" TypographyId="temp">
+        <Translation Language="GB">000</Translation>
+      </Text>
+      <Text Id="__SingleUse_1JKI" Alignment="Center" TypographyId="temp">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_J636" Alignment="Left" TypographyId="valores">
+        <Translation Language="GB">TEMPO (s)</Translation>
+      </Text>
+      <Text Id="__SingleUse_CJRQ" Alignment="Left" TypographyId="valores">
+        <Translation Language="GB">TEMPERATURA (°C)</Translation>
+      </Text>
+      <Text Id="__SingleUse_8C44" Alignment="Left" TypographyId="temp">
+        <Translation Language="GB">000</Translation>
+      </Text>
+      <Text Id="__SingleUse_L7G9" Alignment="Center" TypographyId="temp">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_E0G2" Alignment="Left" TypographyId="temp">
+        <Translation Language="GB">000</Translation>
+      </Text>
+      <Text Id="__SingleUse_ZWSN" Alignment="Center" TypographyId="temp">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_9WQB" Alignment="Left" TypographyId="valores">
+        <Translation Language="GB">TEMPO (s)</Translation>
+      </Text>
+      <Text Id="__SingleUse_2Q4Q" Alignment="Left" TypographyId="valores">
+        <Translation Language="GB">PATAMAR DE REFUSÃO</Translation>
+      </Text>
+      <Text Id="__SingleUse_YLEF" Alignment="Left" TypographyId="valores">
+        <Translation Language="GB">TEMPERATURA (°C)</Translation>
+      </Text>
+      <Text Id="__SingleUse_TZMU" Alignment="Left" TypographyId="valores">
+        <Translation Language="GB">PRIMEIRO PATAMAR</Translation>
+      </Text>
+      <Text Id="__SingleUse_5A6H" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">Perfil</Translation>
+      </Text>
+      <Text Id="__SingleUse_2C0T" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">STATUS</Translation>
+      </Text>
+      <Text Id="__SingleUse_A9G3" Alignment="Center" TypographyId="status">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_MIZY" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_YSZ3" Alignment="Right" TypographyId="temp">
+        <Translation Language="GB">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_WQ6N" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_3B84" Alignment="Right" TypographyId="temp">
+        <Translation Language="GB">&lt;&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_9G5M" Alignment="Left" TypographyId="temp">
+        <Translation Language="GB">00.00</Translation>
+      </Text>
+      <Text Id="__SingleUse_0DCT" Alignment="Center" TypographyId="temp">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+    </TextGroup>
+  </Texts>
+  <Typographies>
+    <Typography Id="Default" Font="verdana.ttf" Size="16" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Small" Font="arialbd.ttf" Size="14" Bpp="4" Direction="LTR" FallbackCharacter="?" WidgetWildcardCharacters="-., 0123456789" />
+    <Typography Id="temp" Font="arialbd.ttf" Size="17" Bpp="4" Direction="LTR" FallbackCharacter="?" WidgetWildcardCharacters="-., 0123456789" WildcardCharacterRanges="0-9" />
+    <Typography Id="status" Font="verdana.ttf" Size="14" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="A-Z" />
+    <Typography Id="valores" Font="ariblk.ttf" Size="20" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="A-Z" />
+  </Typographies>
+</TextDatabase>

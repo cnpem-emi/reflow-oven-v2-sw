@@ -1,8 +1,5 @@
-#Reflow Oven 2.0 <h1>
+# Reflow Oven 2.0 
+Reflow Oven 2.0 is the continuation of development for soldering SMD components using the STM32F746G-DISCO. 
 
-Reflow Oven 2.0 is the continuation of development of the reflow oven project for soldering SMD componentes using the STM32F746G-DISCO
-
-#Required softwares <h1>
-
-STM32CubeIDE: download link <https://www.st.com/en/development-tools/stm32cubeide.html>
-X-CUBE-TOUCHGFX 4.19: download link <https://www.st.com/en/embedded-software/x-cube-touchgfx.html#get-software>
+## Required Software 
+1. **STM32CubeIDE:** [Download Link](https://www.st.com/en/development-tools/stm32cubeide.html) 2. **X-CUBE-TOUCHGFX 4.19:** [Download Link](https://www.st.com/en/embedded-software/x-cube-touchgfx.html#get-software)

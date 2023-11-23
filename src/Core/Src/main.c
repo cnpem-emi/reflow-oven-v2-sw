@@ -26,7 +26,7 @@
 /* USER CODE BEGIN Includes */
 #include <stm32746g_discovery_qspi.h>
 
-//#include "pid.h" // PID library adapted by Rogério Marcondeli from c++ to c
+
 
 #include "stdio.h"
 

@@ -19,18 +19,16 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+//Default library for JPEG images encoding and decoding
 //#include "libjpeg.h"
 #include "app_touchgfx.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <stm32746g_discovery_qspi.h>
-
-
-
 #include "stdio.h"
 
-//#define ARM_MATH_CM7
+//CMSIS ARM math library for optimized mathematical operations in Cortex-M
 #include "arm_math.h"
 
 /* USER CODE END Includes */
@@ -38,11 +36,15 @@
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
 
-//Read pin PIO as CSen (enable)
-#define CSen HAL_GPIO_WritePin(GPIOI,GPIO_PIN_0, GPIO_PIN_RESET);
-#define CSdis HAL_GPIO_WritePin(GPIOI,GPIO_PIN_0, GPIO_PIN_SET);
+//"Defines" to use in the reading function of the MAX6675 module
 
+//Set the state of pin "PIO (D10)" to a low state (reset)
+#define CSen HAL_GPIO_WritePin(GPIOI,GPIO_PIN_0, GPIO_PIN_RESET);
+//Set the state of pin "PIO (D10)" to a high state (set)
+#define CSdis HAL_GPIO_WritePin(GPIOI,GPIO_PIN_0, GPIO_PIN_SET);
+//Set the state of pin "PI1 (D13)" to a high state (set)
 #define SCK_H HAL_GPIO_WritePin(GPIOI,GPIO_PIN_1, GPIO_PIN_SET);
+//Set the state of pin "PI1 (D13)" to a low state (reset)
 #define SCK_L HAL_GPIO_WritePin(GPIOI,GPIO_PIN_1, GPIO_PIN_RESET);
 
 /* USER CODE END PTD */
@@ -92,8 +94,8 @@ SDRAM_HandleTypeDef hsdram1;
 /* USER CODE BEGIN PV */
 static FMC_SDRAM_CommandTypeDef Command;
 
-float heat;
-float volatile heatVal = 0;
+//Variable to receive temperature reading function
+volatile float heatVal = 0;
 
 
 
@@ -113,10 +115,10 @@ static void MX_TIM1_Init(void);
 static void MX_TIM4_Init(void);
 /* USER CODE BEGIN PFP */
 
-//void Draw_Reflow_Curve();
+//Declaration of function de to calculate reflow curve
 volatile void calculateReflowCurve();
 
-
+//Declaration of function to reading temperature with MAX6675 module
 float heatf();
 
 /* USER CODE END PFP */
@@ -124,9 +126,10 @@ float heatf();
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
-
+//To indicate the current version of the system
 #define config_version 130
 
+//Struct "config" with the parameters to reflow process
 typedef struct {
 
 	float32_t KP;
@@ -139,10 +142,6 @@ typedef struct {
 	float32_t secondHeatUpRate;
 	uint32_t ReflowTempeture;
 	uint32_t ReflowTime;
-
-	uint32_t down;
-
-
 
 	//float32_t firstHeatUpRate0;
 	//uint32_t SoakTempeture0;
@@ -176,38 +175,34 @@ typedef struct {
 
 }	config;
 
-
-
-
-//uint32_t TimerBUZZER;
-//uint32_t TimerGui;
-//uint8_t beep;
-
-uint8_t data[2];
-volatile uint8_t ReflowCurve[4000];
-//uint8_t ReflowCurve[1800];
-float temp;
-float lastTemp;
-float duty;
-float pid_error;
-
-volatile int teste=0;
-volatile int ind = 50; // Tempo para compensar inercia inicial do aquecimento
-
-arm_pid_instance_f32 PID;
+// Declaration of the "config" structure named ReflowParameters, containing parameters related to reflow process
 config ReflowParameters;
 
+//Array with 4000 elements
+volatile uint8_t ReflowCurve[4000];
 
+//Variable to store current duty cycle
+float duty;
+
+//Variable to store current pid error
+float pid_error;
+
+//Variable auxiliary
+volatile int teste=0;
+
+//Index variable
+volatile int ind = 50; //start at 50 to compensate for the oven's inertia
+
+// Declaration of an ARM floating-point PID controller instance named PID
+arm_pid_instance_f32 PID;
+
+//Variable to activate the process
 volatile uint8_t ReflowEnable = 0;
-//uint8_t BuzzerEnable = 0;
+
+//Variable for index reflow process
 volatile uint16_t ReflowIndex = 0;
 
-float32_t debug = 0;
-uint8_t Cmd_End[3] = {0xFF, 0xFF, 0xFF};
-uint8_t UART_Recieved_Data[5]={'p','0','x','x','x'};
-volatile uint8_t UART_Recieved_Flag = 0;
-
-char input[20];
+//Control variable for process steps
 volatile uint16_t PhaseIndex[5]={0};
 
 
@@ -217,14 +212,12 @@ volatile uint16_t PhaseIndex[5]={0};
   * @brief  The application entry point.
   * @retval int
   */
+
 int main(void)
 {
-  /* USER CODE BEGIN 1 */
 
+	/* USER CODE BEGIN 1 */
 
-
-
-	//Flash_Read_Data(0x0801FC00, (uint32_t *)&ReflowParameters);
 
 	if (!(ReflowParameters.version == config_version))	{
 
@@ -258,7 +251,8 @@ int main(void)
 			ReflowParameters.ReflowTime0 = 100;
 			ReflowParameters.ReflowTempeture0 = 165;
 			*/
-			// Lead default (138C)
+
+			// Lead default
 			ReflowParameters.firstHeatUpRate = 0.5;
 			ReflowParameters.SoakTime = 150;
 			ReflowParameters.SoakTempeture = 130;
@@ -268,41 +262,42 @@ int main(void)
 
 
 /*
+			//KP, Ki, KD by Vulcan
+
 			ReflowParameters.KP = 85;
 			ReflowParameters.Ki = 0.05;
 			ReflowParameters.KD = 130;
 
-			//KP, KI, KD Ruyz
+			//KP, Ki, KD by Ruyz
 
 			ReflowParameters.KP = 4.2912;
 			ReflowParameters.Ki = 493.07;
 			ReflowParameters.KD = 5.6;
 
 */
+
+			//KP. Ki, KD by Pedro (23.11.2023)
+
 			ReflowParameters.KP = 220;
 			ReflowParameters.Ki = 0.05;
 			ReflowParameters.KD = 210;
 
 
-
-
+			//Assign the value of config_version to the version member of the ReflowParameters structure
 			ReflowParameters.version = config_version;
-			//SaveReflowParameters();
+
 		}
 
-
-
-
+	    //Call the function to calculate the reflow curve
 		calculateReflowCurve();
 
+		//Assign the proportional (Kp), integral (Ki), and derivative (Kd) constants from ReflowParameters to the PID controller instance
 		PID.Kp = ReflowParameters.KP;
 		PID.Ki = ReflowParameters.Ki;
 		PID.Kd = ReflowParameters.KD;
 
+		//Initialize the PID controller instance (PID) with the assigned constants and a reset state (1)
 		arm_pid_init_f32(&PID, 1);
-		//beep=0;
-
-
 
 
   /* USER CODE END 1 */
@@ -346,16 +341,18 @@ int main(void)
   MX_TouchGFX_Init();
   /* USER CODE BEGIN 2 */
 
-  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1); // Start PWM
+  //Start the PWM signal generation on TIM1, specifically on channel 1
+  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
+  //Set the capture/compare value for TIM1, channel 1, to 10
   htim1.Instance->CCR1 = 10;
-
 
 
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  while (1)
+
+  while (1) //ever
   {
     /* USER CODE END WHILE */
 
@@ -363,12 +360,12 @@ int main(void)
 
   /* USER CODE BEGIN 3 */
 
-
+  	  //Variable heatVal receives the value in the read function
   	  heatVal = heatf();
+  	  //Wait 500ms
    	  HAL_Delay(500);
-   	  //TempDrawCounter++;
 
-
+   	  	  	//Logic to find out which stage the system is in at the moment
    	  	  	if (ReflowIndex == PhaseIndex[0]) {
   			    teste=1;
   			}
@@ -387,17 +384,14 @@ int main(void)
 
 
 
-
- // Tentativa de implementar controle no main
-
    	   if (ReflowEnable == 1) {
 
-   				//Control deviation (Esforço de controle)
+   		   	    //Proportional error subtracted from the current heat value (heatVal) of the value in the ReflowCurve
    				pid_error =  ReflowCurve[ReflowIndex] - heatVal;
    				//Actuator size
    				duty =  arm_pid_f32(&PID, pid_error);
 
-   				//Manipulated variable limitation and anti-wind-up (update 27.03.2021)
+   				//Ensures that the duty cycle remains within a valid range. If the duty exceeds 1000, it will be limited to 1000
    				if (duty > 1000) {
    					duty = 1000;
    					PID.Ki = 0;
@@ -419,7 +413,6 @@ int main(void)
    				}
    	   }
    	   else{
-   				//ReflowEnable = 0;
    		   	   	ReflowIndex = 0;
    				htim1.Instance->CCR1 = 1000;
    				duty = 1000;
@@ -964,29 +957,34 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 
-
+//Function to read temperature from MAX6675 and return the temperature in Celsius
 float heatf()
 {
 
-	uint16_t data[16];
+	float heat;        //Variable to store temperature
+	uint16_t data[16]; //Array to store the 16 bits of data read from MAX6675
 
-	CSen;
-	SCK_L;
 
+	CSen;  // Enable MAX6675 by setting chip select (CS) pin low
+	SCK_L; // Ensure clock (SCK) is initially low
+
+	//This range is
 	for (int x = 15; x >= 0; x--)
 	{
 
-		SCK_H;
-		data[x] = HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_14);
-		SCK_L;
+		SCK_H;                                          // Set clock high to read a bit
+		data[x] = HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_14); // Read the bit and store it
+		SCK_L;                                          // Set clock low for the next bit
 
 	}
 
-	CSdis;
+	CSdis; // Disable MAX6675 by setting chip select (CS) pin high
+
+	// Calculate the temperature from the received bits
 	heat = data[14]*2048 + data[13]*1024 + data[12]*512 + data[11]*256 + data[10]*128+ data[9]*64+ data[8]*32+ data[7]*16+ data[6]*8+ data[5]*4 + data[4]*2 + data[3];
 
+	// Convert the raw temperature to Celsius (0.25 degrees resolution)
 	return heat*0.25;
-
 }
 
 
@@ -1046,60 +1044,18 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 	HAL_IncTick();
 
 	}
-
-	/* USER CODE BEGIN Callback 1 */
-
-/*
-	    //Reflow start:
-	    		if (ReflowEnable == 1) {
-
-	    			//Control deviation (Esforço de controle)
-	    			float pid_error =  ReflowCurve[ReflowIndex] - heatVal;
-
-	    			//Actuator size
-	    			duty =  arm_pid_f32(&PID, pid_error);
-
-	    			//Manipulated variable limitation and anti-wind-up (update 27.03.2021)
-	    			if (duty > 1000) {
-	    				duty = 1000;
-	    				PID.Ki = 0;
-	    			} else if (duty < 0) {
-	    				duty = 0;
-	    			}
-	    			else{
-	    				PID.Ki = ReflowParameters.Ki;
-	    			}
-
-	    			//Dutycycle customize
-	    			htim1.Instance->CCR1 = 1000 - (uint16_t)duty;
-
-	    			ReflowIndex++;
-
-	    			//Finish condition
-	    			if (ReflowIndex == PhaseIndex[4]) {
-	    				    //sprintf(ConsoleMSG,"FINISHED, OPEN DOOR");
-	    					//BuzzerEnable = 1;
-	    					ReflowEnable = 0;
-	    			}
-	    		}else{
-	    			ReflowIndex = 0;
-	    			//Dutycycle = 0
-	    			htim1.Instance->CCR1 = 0;
-	    		}
-
-*/
-  /* USER CODE END Callback 1 */
 }
 
-
+//Function to calculate reflow curve
 void calculateReflowCurve()
 {
+	//Initialize the ReflowCurve array with zeros
 	for(int i =0;i<4000;i++)
 	{
 		ReflowCurve[i]=0;
 	}
 
-	//int ind = 0;
+	// Define the time step for the reflow curve calculation
 	float timestep = 0.5;
 
 	//First Heat Up:
@@ -1112,7 +1068,6 @@ void calculateReflowCurve()
 
 	PhaseIndex[1]=ind;
 
-
 	//Soak
 	int Soakduration = ReflowParameters.SoakTime;
 
@@ -1120,11 +1075,9 @@ void calculateReflowCurve()
 		ReflowCurve[ind+i]=ReflowParameters.SoakTempeture;
 	}
 
-	//Second Heat Up:
+	//Second Heat Up
 	ind = ind + Soakduration;
-
 	PhaseIndex[2]=ind;
-
 	timestep = 0.5;
 
 	while (ReflowParameters.SoakTempeture + timestep * ReflowParameters.secondHeatUpRate <= ReflowParameters.ReflowTempeture)
@@ -1135,7 +1088,6 @@ void calculateReflowCurve()
 	}
 
 	PhaseIndex[3]=ind;
-
 
 
 	//Reflow
@@ -1152,7 +1104,6 @@ void calculateReflowCurve()
 	PhaseIndex[4]=ind;
 
 
-
 	//Cooldown
 	timestep = 0.5;
 	while (ReflowParameters.ReflowTempeture - timestep * 1.8 >= 24)
@@ -1162,49 +1113,7 @@ void calculateReflowCurve()
 	timestep = timestep + 0.5;
 	}
 
-
-
 }
-
-
-/*
-void Draw_Reflow_Curve()	{
-	float32_t dx = 0.20833; //275px / 660s / 500 ms
-	float32_t dy = 0.7143; //175px / 245 Grad
-	uint32_t OffsetX = 35;
-	uint32_t OffsetY = 240;
-	uint32_t index = 0;
-
-	while(ReflowCurve[index] != 0){
-
-		NextionDrawDot(OffsetX + (uint32_t)((float32_t)(index)*dx), OffsetY - (uint32_t)((float32_t)(ReflowCurve[index])*dy));
-		index= index + 4;
-
-		if(strncmp((char *)UART_Recieved_Data, "p0b02", 5) == 0)
-			break;
-	}
-}*/
-
-/*
-void startReflow()	{
-	ReflowEnable = 1;
-	NEXTION_CMD("page 0");
-	Draw_Reflow_Curve();
-	TempDrawCounter = 0;
-	Update_Page_0();
-}*/
-
-/*
-void stopReflow()	{
-
-	if ( ReflowEnable == 1 )	{
-		ReflowEnable = 0;
-		TempDrawEnable = 0;
-		sprintf(ConsoleMSG,"STOPPED");
-		Update_Page_0();
-	}
-}*/
-
 
 
 

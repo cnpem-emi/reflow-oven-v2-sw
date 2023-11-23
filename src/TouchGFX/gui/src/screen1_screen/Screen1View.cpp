@@ -49,6 +49,7 @@ void Screen1View::profile()
 
 }
 
+// If button is clicked call virtual function "startReflow"
 void Screen1View::startReflow()
 {
 	ReflowEnable = 1;

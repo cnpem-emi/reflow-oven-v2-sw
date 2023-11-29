@@ -191,7 +191,7 @@ float pid_error;
 volatile int teste=0;
 
 //Index variable
-volatile int ind = 50; //start at 50 to compensate for the oven's inertia
+volatile int ind = 15; //start at 50 to compensate for the oven's inertia
 
 // Declaration of an ARM floating-point PID controller instance named PID
 arm_pid_instance_f32 PID;

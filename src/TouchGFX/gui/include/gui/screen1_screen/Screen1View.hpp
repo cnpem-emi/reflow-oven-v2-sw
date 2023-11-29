@@ -33,7 +33,7 @@ protected:
 
      //volatile int ReflowIndex=0;
      //volatile int PhaseIndex[5]={0};
-     volatile int ind = 50;
+     volatile int ind = 15;
 
 };
 

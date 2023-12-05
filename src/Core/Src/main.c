@@ -276,11 +276,30 @@ int main(void)
 
 */
 
-			//KP. Ki, KD by Pedro (23.11.2023)
+			//KP. Ki, KD by Pedro (empirical method) (23.11.2023)
 
-			ReflowParameters.KP = 220;
-			ReflowParameters.Ki = 0.05;
-			ReflowParameters.KD = 210;
+//			ReflowParameters.KP = 220;
+//			ReflowParameters.Ki = 0.05;
+//			ReflowParameters.KD = 210;
+
+			//KP, Ki, KD by Ziegler-Nichols method (PID classic) to acquisiton time (1000ms) (04.12.2023)
+
+//			ReflowParameters.KP = 240;
+//			ReflowParameters.Ki = 4.8;
+//			ReflowParameters.KD = 3000;
+
+			//KP, Ki, KD by Ziegler-Nichols method (PID classic) to acquisiton time (1500ms) (04.12.2023)
+
+			ReflowParameters.KP = 240;
+			ReflowParameters.Ki = 7.2;
+			ReflowParameters.KD = 2000;
+
+			//KP, Ki, KD by Ziegler-Nichols method (some overshoot) (04.12.2023)
+
+//			ReflowParameters.KP = 132;
+//			ReflowParameters.Ki = 2.64;
+//			ReflowParameters.KD = 4400;
+
 
 
 			//Assign the value of config_version to the version member of the ReflowParameters structure

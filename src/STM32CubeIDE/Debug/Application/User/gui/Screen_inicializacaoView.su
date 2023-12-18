@@ -1,0 +1,6 @@
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
+../../TouchGFX/gui/include/gui/screen_inicializacao_screen/Screen_inicializacaoView.hpp:11:13:Screen_inicializacaoView::~Screen_inicializacaoView()	0	static
+C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/TouchGFX/gui/src/screen_inicializacao_screen/Screen_inicializacaoView.cpp:13:6:virtual void Screen_inicializacaoView::tearDownScreen()	0	static
+C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/TouchGFX/gui/src/screen_inicializacao_screen/Screen_inicializacaoView.cpp:8:6:virtual void Screen_inicializacaoView::setupScreen()	0	static
+../../TouchGFX/gui/include/gui/screen_inicializacao_screen/Screen_inicializacaoView.hpp:11:13:virtual Screen_inicializacaoView::~Screen_inicializacaoView()	8	static
+C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/TouchGFX/gui/src/screen_inicializacao_screen/Screen_inicializacaoView.cpp:3:1:Screen_inicializacaoView::Screen_inicializacaoView()	8	static

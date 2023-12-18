@@ -253,13 +253,12 @@ int main(void)
 			*/
 
 			// Lead default
-			ReflowParameters.firstHeatUpRate = 0.5;
+			ReflowParameters.firstHeatUpRate = 0.6;
 			ReflowParameters.SoakTime = 150;
-			ReflowParameters.SoakTempeture = 130;
-			ReflowParameters.secondHeatUpRate = 0.5;
-			ReflowParameters.ReflowTime = 100;
-			ReflowParameters.ReflowTempeture = 160;
-
+			ReflowParameters.SoakTempeture = 150;
+			ReflowParameters.secondHeatUpRate = 0.6;
+			ReflowParameters.ReflowTime = 40;
+			ReflowParameters.ReflowTempeture = 230;
 
 /*
 			//KP, Ki, KD by Vulcan

@@ -1,5 +1,5 @@
 Application/User/TouchGFX/target/TouchGFXHAL.o: \
- C:/Users/pedro.mamud/Desktop/CONTROLE_PID_v1_PEDRO/TouchGFX/target/TouchGFXHAL.cpp \
+ C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/TouchGFX/target/TouchGFXHAL.cpp \
  ../../TouchGFX/target/TouchGFXHAL.hpp \
  ../../TouchGFX/target/generated/TouchGFXGeneratedHAL.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/HAL.hpp \

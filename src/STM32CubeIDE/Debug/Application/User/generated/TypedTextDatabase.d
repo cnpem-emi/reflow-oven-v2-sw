@@ -1,5 +1,5 @@
 Application/User/generated/TypedTextDatabase.o: \
- C:/Users/pedro.mamud/Desktop/CONTROLE_PID_v1_PEDRO/TouchGFX/generated/texts/src/TypedTextDatabase.cpp \
+ C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/TouchGFX/generated/texts/src/TypedTextDatabase.cpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Font.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Unicode.hpp \

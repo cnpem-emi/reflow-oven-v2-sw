@@ -1,5 +1,5 @@
 Application/User/Core/stm32f7xx_it.o: \
- C:/Users/pedro.mamud/Desktop/CONTROLE_PID_v1_PEDRO/Core/Src/stm32f7xx_it.c \
+ C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/Core/Src/stm32f7xx_it.c \
  ../../Core/Inc/main.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h \
  ../../Core/Inc/stm32f7xx_hal_conf.h \

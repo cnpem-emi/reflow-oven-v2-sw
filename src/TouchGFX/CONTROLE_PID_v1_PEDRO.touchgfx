@@ -2,7 +2,8 @@
   "Application": {
     "Screens": [
       {
-        "Name": "Screen1",
+        "Name": "Screen_inicializacao",
+        "OverrideDefaultBufferSize": true,
         "CanvasBufferSize": 7200,
         "Components": [
           {
@@ -17,264 +18,66 @@
             }
           },
           {
+            "Type": "Image",
+            "Name": "image1",
+            "X": 139,
+            "Y": 155,
+            "Width": 202,
+            "Height": 138,
+            "RelativeFilename": "cnpem.png"
+          },
+          {
             "Type": "TextArea",
             "Name": "textArea1",
-            "X": 382,
-            "Y": 16,
-            "Width": 98,
-            "Height": 33,
-            "TextId": "__SingleUse_0DCT",
+            "X": 87,
+            "Y": 30,
+            "Width": 306,
+            "Height": 44,
+            "TextId": "__SingleUse_3GFI",
             "TextRotation": "0",
-            "Wildcard1": {
-              "TextId": "__SingleUse_9G5M",
-              "UseBuffer": true,
-              "BufferSize": 6
-            }
-          },
-          {
-            "Type": "DynamicGraph",
-            "Name": "dynamicGraph1",
-            "X": 11,
-            "Y": 16,
-            "Width": 383,
-            "Height": 240,
-            "DataSeed": 525763241,
-            "NumberOfValues": 1200,
-            "MaxY": 250.0,
-            "MinY": 10.0,
-            "Precision": "1",
-            "LastIndex": 1199,
-            "XAxisScale": 1.0,
-            "LabelSizeTop": 6,
-            "LabelSizeBottom": 14,
-            "LabelSizeLeft": 55,
-            "LabelSizeRight": 2,
-            "PaddingTop": 3,
-            "PaddingLeft": 9,
-            "PaddingRight": -15,
-            "GraphType": "GraphWrapClear",
-            "GraphDrawers": [
-              {
-                "Type": "LineDrawer",
-                "LineWidth": 2,
-                "Color": {
-                  "Red": 196,
-                  "Green": 22,
-                  "Blue": 22
-                }
-              }
-            ],
-            "XAxisLabel": {
-              "Type": "GraphLabel",
-              "Interval": 200.0,
-              "DecimalSeparator": "Point",
-              "TextColor": {
-                "Red": 255,
-                "Green": 255,
-                "Blue": 255
-              },
-              "TextId": "__SingleUse_WQ6N",
-              "TextRotation": "0",
-              "Position": "Bottom"
-            },
-            "YAxisLabel": {
-              "Type": "GraphLabel",
-              "Interval": 25.0,
-              "NumberOfDecimals": 2,
-              "DecimalSeparator": "Point",
-              "TextColor": {
-                "Red": 255,
-                "Green": 255,
-                "Blue": 255
-              },
-              "TextId": "__SingleUse_3B84",
-              "TextRotation": "0",
-              "Position": "Left"
-            }
-          },
-          {
-            "Type": "StaticGraph",
-            "Name": "graph1",
-            "X": 11,
-            "Y": 16,
-            "Width": 383,
-            "Height": 240,
-            "DataSeed": 1041876867,
-            "NumberOfValues": 4000,
-            "MaxX": 1200.0,
-            "PrecisionX": "1",
-            "MaxY": 250.0,
-            "MinY": 10.0,
-            "PrecisionY": "1",
-            "XAxisScale": 1.0,
-            "LabelSizeTop": 6,
-            "LabelSizeBottom": 14,
-            "LabelSizeLeft": 55,
-            "LabelSizeRight": 2,
-            "PaddingTop": 3,
-            "PaddingLeft": 9,
-            "PaddingRight": -16,
-            "GraphDrawers": [
-              {
-                "Type": "LineDrawer",
-                "LineWidth": 2,
-                "Color": {
-                  "Red": 23,
-                  "Green": 194,
-                  "Blue": 32
-                }
-              }
-            ],
-            "XAxisGrid": {
-              "Type": "GraphGrid",
-              "Color": {
-                "Red": 20,
-                "Green": 151,
-                "Blue": 197
-              },
-              "Interval": 50.0,
-              "LineWidth": 1
-            },
-            "XAxisLabel": {
-              "Type": "GraphLabel",
-              "Interval": 200.0,
-              "DecimalSeparator": "Point",
-              "TextColor": {
-                "Red": 255
-              },
-              "TextId": "__SingleUse_MIZY",
-              "TextRotation": "0",
-              "Position": "Bottom"
-            },
-            "YAxisLabel": {
-              "Type": "GraphLabel",
-              "Interval": 25.0,
-              "NumberOfDecimals": 2,
-              "DecimalSeparator": "Point",
-              "TextColor": {
-                "Red": 255
-              },
-              "TextId": "__SingleUse_YSZ3",
-              "TextRotation": "0",
-              "Position": "Left"
-            },
-            "Moveable": true
-          },
-          {
-            "Type": "ButtonWithIcon",
-            "Name": "play",
-            "X": 402,
-            "Y": 76,
-            "Width": 60,
-            "Height": 60,
-            "Pressed": "__designer\\Blue_Buttons_Round_icon_button.png",
-            "Released": "__designer\\Blue_Buttons_Round_icon_button.png",
-            "IconPressed": "__designer\\Blue_Icons_Power_32.png",
-            "IconReleased": "__designer\\Blue_Icons_Power_32.png",
-            "IconX": 16,
-            "IconY": 16,
-            "IconHeight": 29,
-            "IconWidth": 29
+            "AutoSize": true
           },
           {
             "Type": "TextArea",
             "Name": "textArea2",
-            "X": 402,
-            "Y": 49,
-            "Width": 55,
-            "Height": 17,
-            "TextId": "__SingleUse_A9G3",
+            "X": 90,
+            "Y": 125,
+            "Width": 300,
+            "Height": 23,
+            "TextId": "__SingleUse_GLSO",
             "TextRotation": "0",
-            "AutoSize": true,
-            "Wildcard1": {
-              "TextId": "__SingleUse_2C0T",
-              "UseBuffer": true,
-              "BufferSize": 10
-            }
-          },
-          {
-            "Type": "ButtonWithLabel",
-            "Name": "perfil",
-            "X": 401,
-            "Y": 136,
-            "Width": 60,
-            "Height": 60,
-            "Pressed": "__designer\\Blue_Buttons_Round_icon_button.png",
-            "Released": "__designer\\Blue_Buttons_Round_icon_button.png",
-            "TextId": "__SingleUse_5A6H",
-            "ReleasedColor": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "PressedColor": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "TextRotation": "0"
-          },
-          {
-            "Type": "ButtonWithIcon",
-            "Name": "Config",
-            "X": 402,
-            "Y": 212,
-            "Width": 60,
-            "Height": 60,
-            "Pressed": "__designer\\Blue_Buttons_Round_icon_button.png",
-            "Released": "__designer\\Blue_Buttons_Round_icon_button.png",
-            "IconPressed": "__designer\\Blue_Icons_Settings_32.png",
-            "IconReleased": "__designer\\Blue_Icons_Settings_32.png",
-            "IconX": 15,
-            "IconY": 15,
-            "IconHeight": 30,
-            "IconWidth": 30
+            "AutoSize": true
           }
         ],
         "Interactions": [
           {
+            "InteractionName": "Interaction1",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerScreenEntered"
+            },
+            "Action": {
+              "Type": "ActionDelay",
+              "Duration": 150
+            }
+          },
+          {
             "InteractionName": "Interaction2",
+            "HasCompletedTrigger": true,
             "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "perfil"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "profile"
-            }
-          },
-          {
-            "InteractionName": "Interaction3",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "play"
-            },
-            "Action": {
-              "Type": "ActionCustom",
-              "FunctionName": "startReflow"
-            }
-          },
-          {
-            "InteractionName": "Interaction4",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "Config"
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "Interaction1"
             },
             "Action": {
               "Type": "ActionGotoScreen",
               "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "Screen2"
+              "ActionComponent": "Screen_Configuracao"
             }
-          }
-        ],
-        "CustomActions": [
-          {
-            "Name": "action1"
           }
         ]
       },
       {
-        "Name": "Screen2",
+        "Name": "Screen_Configuracao",
         "Components": [
           {
             "Type": "Box",
@@ -381,7 +184,7 @@
           },
           {
             "Type": "TextArea",
-            "Name": "textArea_temperature_patamar1",
+            "Name": "TEMPERATURA1",
             "X": 101,
             "Y": 76,
             "Width": 61,
@@ -396,7 +199,7 @@
           },
           {
             "Type": "TextArea",
-            "Name": "textArea2_tempo_patamar1",
+            "Name": "TEMPO1",
             "X": 318,
             "Y": 76,
             "Width": 61,
@@ -411,7 +214,7 @@
           },
           {
             "Type": "Button",
-            "Name": "up_temperature_patamar1",
+            "Name": "button_up_temperature_patamar1",
             "X": 70,
             "Y": 110,
             "Width": 30,
@@ -421,7 +224,7 @@
           },
           {
             "Type": "Button",
-            "Name": "up_tempo_patamar1",
+            "Name": "button_up_tempo_patamar1",
             "X": 288,
             "Y": 110,
             "Width": 30,
@@ -431,7 +234,7 @@
           },
           {
             "Type": "Button",
-            "Name": "down_temperature_patamar1",
+            "Name": "button2_down_temperature_patamar1",
             "X": 162,
             "Y": 110,
             "Width": 30,
@@ -441,7 +244,7 @@
           },
           {
             "Type": "Button",
-            "Name": "down_tempo_patamar1",
+            "Name": "button_down_tempo_patamar1",
             "X": 380,
             "Y": 110,
             "Width": 30,
@@ -497,7 +300,7 @@
           },
           {
             "Type": "TextArea",
-            "Name": "textArea2_2",
+            "Name": "TEMPERATURA2",
             "X": 96,
             "Y": 209,
             "Width": 61,
@@ -512,7 +315,7 @@
           },
           {
             "Type": "TextArea",
-            "Name": "textArea2_1_1",
+            "Name": "TEMPO2",
             "X": 313,
             "Y": 209,
             "Width": 61,
@@ -527,7 +330,7 @@
           },
           {
             "Type": "Button",
-            "Name": "button1_3",
+            "Name": "button_up_temperature_patamar2",
             "X": 65,
             "Y": 243,
             "Width": 30,
@@ -537,7 +340,7 @@
           },
           {
             "Type": "Button",
-            "Name": "button1_1_1",
+            "Name": "button_up_tempo_patamar2",
             "X": 283,
             "Y": 243,
             "Width": 30,
@@ -547,7 +350,7 @@
           },
           {
             "Type": "Button",
-            "Name": "button1_2_2",
+            "Name": "button_down_temperature_patamar2",
             "X": 157,
             "Y": 243,
             "Width": 30,
@@ -557,13 +360,23 @@
           },
           {
             "Type": "Button",
-            "Name": "button1_2_1_1",
+            "Name": "button_down_tempo_patamar2",
             "X": 375,
             "Y": 243,
             "Width": 30,
             "Height": 17,
             "Pressed": "__designer\\Blue_Icons_Down_arrow_32.png",
             "Released": "__designer\\Blue_Icons_Down_arrow_32.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "button_save",
+            "X": 420,
+            "Y": 200,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Round_icon_button.png",
+            "Released": "__designer\\Blue_Buttons_Round_icon_button.png"
           }
         ],
         "Interactions": [
@@ -576,8 +389,416 @@
             "Action": {
               "Type": "ActionGotoScreen",
               "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "Screen1"
+              "ActionComponent": "Screen_refusao"
             }
+          },
+          {
+            "InteractionName": "Interaction2",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "button_save"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "save_configuration"
+            }
+          },
+          {
+            "InteractionName": "Interaction3",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "button_up_temperature_patamar1"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "up_temperature_patamar1"
+            }
+          },
+          {
+            "InteractionName": "Interaction4",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "button2_down_temperature_patamar1"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "down_temperature_patamar1"
+            }
+          },
+          {
+            "InteractionName": "Interaction5",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "button_save"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "save"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Screen_refusao",
+        "CanvasBufferSize": 7200,
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "Width": 480,
+            "Height": 272,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxWithBorder1_1",
+            "X": 78,
+            "Y": 17,
+            "Width": 310,
+            "Height": 206,
+            "Color": {
+              "Red": 247,
+              "Green": 247,
+              "Blue": 247
+            },
+            "BorderColor": {
+              "Red": 9,
+              "Green": 91,
+              "Blue": 222
+            },
+            "BorderSize": 4
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxWithBorder1",
+            "X": 394,
+            "Y": 27,
+            "Width": 78,
+            "Height": 41,
+            "Color": {
+              "Red": 247,
+              "Green": 247,
+              "Blue": 247
+            },
+            "BorderColor": {
+              "Red": 222,
+              "Green": 7,
+              "Blue": 7
+            },
+            "BorderSize": 5
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "X": 394,
+            "Y": 40,
+            "Width": 78,
+            "Height": 28,
+            "TextId": "__SingleUse_0DCT",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 242,
+              "Green": 10,
+              "Blue": 10
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_9G5M",
+              "UseBuffer": true,
+              "BufferSize": 6
+            }
+          },
+          {
+            "Type": "DynamicGraph",
+            "Name": "dynamicGraph1",
+            "X": 14,
+            "Y": 10,
+            "Width": 374,
+            "Height": 237,
+            "DataSeed": 525763241,
+            "NumberOfValues": 1199,
+            "MaxY": 250.0,
+            "MinY": 10.0,
+            "Precision": "1",
+            "LastIndex": 1198,
+            "XAxisScale": 1.0,
+            "LabelSizeTop": 6,
+            "LabelSizeBottom": 14,
+            "LabelSizeLeft": 55,
+            "LabelSizeRight": 2,
+            "PaddingTop": 3,
+            "PaddingLeft": 9,
+            "PaddingRight": -16,
+            "GraphType": "GraphWrapClear",
+            "GraphDrawers": [
+              {
+                "Type": "LineDrawer",
+                "LineWidth": 2,
+                "Color": {
+                  "Red": 196,
+                  "Green": 22,
+                  "Blue": 22
+                }
+              }
+            ],
+            "XAxisLabel": {
+              "Type": "GraphLabel",
+              "Interval": 200.0,
+              "DecimalSeparator": "Point",
+              "TextColor": {
+                "Red": 255,
+                "Green": 255,
+                "Blue": 255
+              },
+              "TextId": "__SingleUse_WQ6N",
+              "TextRotation": "0",
+              "Position": "Bottom"
+            },
+            "YAxisLabel": {
+              "Type": "GraphLabel",
+              "Interval": 25.0,
+              "NumberOfDecimals": 2,
+              "DecimalSeparator": "Point",
+              "TextColor": {
+                "Red": 255,
+                "Green": 255,
+                "Blue": 255
+              },
+              "TextId": "__SingleUse_3B84",
+              "TextRotation": "0",
+              "Position": "Left"
+            }
+          },
+          {
+            "Type": "StaticGraph",
+            "Name": "graph1",
+            "X": 14,
+            "Y": 10,
+            "Width": 374,
+            "Height": 237,
+            "DataSeed": 1041876867,
+            "NumberOfValues": 4000,
+            "MaxX": 1199.0,
+            "PrecisionX": "1",
+            "MaxY": 250.0,
+            "MinY": 10.0,
+            "PrecisionY": "1",
+            "XAxisScale": 1.0,
+            "LabelSizeTop": 6,
+            "LabelSizeBottom": 14,
+            "LabelSizeLeft": 55,
+            "LabelSizeRight": 2,
+            "PaddingTop": 3,
+            "PaddingLeft": 9,
+            "PaddingRight": -16,
+            "GraphDrawers": [
+              {
+                "Type": "LineDrawer",
+                "LineWidth": 3,
+                "Color": {
+                  "Red": 23,
+                  "Green": 194,
+                  "Blue": 32
+                }
+              }
+            ],
+            "XAxisGrid": {
+              "Type": "GraphGrid",
+              "Color": {
+                "Red": 20,
+                "Green": 151,
+                "Blue": 197
+              },
+              "Interval": 100.0,
+              "LineWidth": 1
+            },
+            "YAxisGrid": {
+              "Type": "GraphGrid",
+              "Color": {
+                "Red": 20,
+                "Green": 151,
+                "Blue": 197
+              },
+              "Interval": 25.0,
+              "LineWidth": 1
+            },
+            "XAxisLabel": {
+              "Type": "GraphLabel",
+              "Interval": 200.0,
+              "DecimalSeparator": "Point",
+              "TextColor": {
+                "Red": 255
+              },
+              "TextId": "__SingleUse_MIZY",
+              "TextRotation": "0",
+              "Position": "Bottom"
+            },
+            "YAxisLabel": {
+              "Type": "GraphLabel",
+              "Interval": 25.0,
+              "NumberOfDecimals": 2,
+              "DecimalSeparator": "Point",
+              "TextColor": {
+                "Red": 255
+              },
+              "TextId": "__SingleUse_YSZ3",
+              "TextRotation": "0",
+              "Position": "Left"
+            },
+            "Moveable": true
+          },
+          {
+            "Type": "ButtonWithIcon",
+            "Name": "play",
+            "X": 406,
+            "Y": 145,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Round_icon_button.png",
+            "Released": "__designer\\Blue_Buttons_Round_icon_button.png",
+            "IconPressed": "__designer\\Blue_Icons_Power_32.png",
+            "IconReleased": "__designer\\Blue_Icons_Power_32.png",
+            "IconX": 16,
+            "IconY": 16,
+            "IconHeight": 29,
+            "IconWidth": 29
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea2",
+            "X": 409,
+            "Y": 68,
+            "Width": 55,
+            "Height": 17,
+            "TextId": "__SingleUse_A9G3",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "__SingleUse_2C0T",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "perfil",
+            "X": 406,
+            "Y": 85,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Round_icon_button.png",
+            "Released": "__designer\\Blue_Buttons_Round_icon_button.png",
+            "TextId": "__SingleUse_5A6H",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithIcon",
+            "Name": "Config",
+            "X": 406,
+            "Y": 205,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Round_icon_button.png",
+            "Released": "__designer\\Blue_Buttons_Round_icon_button.png",
+            "IconPressed": "__designer\\Blue_Icons_Settings_32.png",
+            "IconReleased": "__designer\\Blue_Icons_Settings_32.png",
+            "IconX": 15,
+            "IconY": 15,
+            "IconHeight": 30,
+            "IconWidth": 30
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea3",
+            "X": 7,
+            "Y": 49,
+            "Width": 15,
+            "Height": 174,
+            "TextId": "__SingleUse_2YZ1",
+            "TextRotation": "270",
+            "Color": {
+              "Red": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea3_1",
+            "X": 180,
+            "Y": 255,
+            "Width": 72,
+            "Height": 17,
+            "TextId": "__SingleUse_Y0HR",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea3_1_1",
+            "X": 388,
+            "Y": 10,
+            "Width": 89,
+            "Height": 13,
+            "TextId": "__SingleUse_YTN9",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255
+            }
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction2",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "perfil"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "profile"
+            }
+          },
+          {
+            "InteractionName": "Interaction3",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "play"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "startReflow"
+            }
+          },
+          {
+            "InteractionName": "Interaction4",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "Config"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Screen_Configuracao"
+            }
+          }
+        ],
+        "CustomActions": [
+          {
+            "Name": "action1"
           }
         ]
       }
@@ -589,7 +810,7 @@
       "Height": 272
     },
     "SelectedColorDepth": 16,
-    "StartupScreenName": "Screen1",
+    "StartupScreenName": "Screen_inicializacao",
     "SelectedStartupLanguage": "GB",
     "Skin": "Blue",
     "TouchGfxPath": "../Middlewares/ST/touchgfx",

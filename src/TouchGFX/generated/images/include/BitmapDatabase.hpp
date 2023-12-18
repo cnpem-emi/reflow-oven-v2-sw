@@ -12,6 +12,7 @@ const uint16_t BITMAP_BLUE_ICONS_DOWN_ARROW_32_ID = 2;
 const uint16_t BITMAP_BLUE_ICONS_POWER_32_ID = 3;
 const uint16_t BITMAP_BLUE_ICONS_SETTINGS_32_ID = 4;
 const uint16_t BITMAP_BLUE_ICONS_UP_ARROW_32_ID = 5;
+const uint16_t BITMAP_CNPEM_ID = 6;
 
 namespace BitmapDatabase
 {

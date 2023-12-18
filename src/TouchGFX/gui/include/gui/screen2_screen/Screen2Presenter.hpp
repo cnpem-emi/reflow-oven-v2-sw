@@ -27,6 +27,13 @@ public:
 
     virtual ~Screen2Presenter() {};
 
+
+    int16_t get_temperatura1()
+        {
+            return model->get_temperatura1();
+        }
+
+
 private:
     Screen2Presenter();
 

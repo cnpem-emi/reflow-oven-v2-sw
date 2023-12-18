@@ -1,0 +1,12 @@
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	0	static
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	0	static
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
+../../TouchGFX/generated/gui_generated/include/gui_generated/screen_configuracao_screen/Screen_ConfiguracaoViewBase.hpp:26:18:virtual void Screen_ConfiguracaoViewBase::save_configuration()	0	static
+../../TouchGFX/generated/gui_generated/include/gui_generated/screen_configuracao_screen/Screen_ConfiguracaoViewBase.hpp:41:18:virtual void Screen_ConfiguracaoViewBase::save()	0	static
+../../TouchGFX/gui/include/gui/screen_configuracao_screen/Screen_ConfiguracaoView.hpp:11:13:Screen_ConfiguracaoView::~Screen_ConfiguracaoView()	0	static
+C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/TouchGFX/gui/src/screen_configuracao_screen/Screen_ConfiguracaoView.cpp:13:6:virtual void Screen_ConfiguracaoView::tearDownScreen()	0	static
+C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/TouchGFX/gui/src/screen_configuracao_screen/Screen_ConfiguracaoView.cpp:8:6:virtual void Screen_ConfiguracaoView::setupScreen()	0	static
+C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/TouchGFX/gui/src/screen_configuracao_screen/Screen_ConfiguracaoView.cpp:18:6:virtual void Screen_ConfiguracaoView::up_temperature_patamar1()	8	static
+C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/TouchGFX/gui/src/screen_configuracao_screen/Screen_ConfiguracaoView.cpp:25:6:virtual void Screen_ConfiguracaoView::down_temperature_patamar1()	8	static
+../../TouchGFX/gui/include/gui/screen_configuracao_screen/Screen_ConfiguracaoView.hpp:11:13:virtual Screen_ConfiguracaoView::~Screen_ConfiguracaoView()	8	static
+C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/TouchGFX/gui/src/screen_configuracao_screen/Screen_ConfiguracaoView.cpp:3:1:Screen_ConfiguracaoView::Screen_ConfiguracaoView()	8	static

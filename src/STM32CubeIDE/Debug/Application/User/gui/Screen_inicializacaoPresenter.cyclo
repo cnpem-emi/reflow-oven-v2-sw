@@ -1,0 +1,5 @@
+../../TouchGFX/gui/include/gui/screen_inicializacao_screen/Screen_inicializacaoPresenter.hpp:28:13:Screen_inicializacaoPresenter::~Screen_inicializacaoPresenter()	1
+C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/TouchGFX/gui/src/screen_inicializacao_screen/Screen_inicializacaoPresenter.cpp:10:6:virtual void Screen_inicializacaoPresenter::activate()	1
+../../TouchGFX/gui/include/gui/screen_inicializacao_screen/Screen_inicializacaoPresenter.hpp:28:13:virtual Screen_inicializacaoPresenter::~Screen_inicializacaoPresenter()	1
+../../TouchGFX/gui/include/gui/screen_inicializacao_screen/Screen_inicializacaoPresenter.hpp:28:13:virtual void* Screen_inicializacaoPresenter::_ZThn4_N29Screen_inicializacaoPresenterD1Ev()	1
+C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/TouchGFX/gui/src/screen_inicializacao_screen/Screen_inicializacaoPresenter.cpp:4:1:Screen_inicializacaoPresenter::Screen_inicializacaoPresenter(Screen_inicializacaoView&)	1

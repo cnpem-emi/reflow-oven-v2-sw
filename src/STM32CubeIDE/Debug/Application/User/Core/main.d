@@ -1,5 +1,5 @@
 Application/User/Core/main.o: \
- C:/Users/pedro.mamud/Desktop/CONTROLE_PID_v1_PEDRO/Core/Src/main.c \
+ C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/Core/Src/main.c \
  ../../Core/Inc/main.h \
  ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h \
  ../../Core/Inc/stm32f7xx_hal_conf.h \
@@ -40,7 +40,7 @@ Application/User/Core/main.o: \
  ../../TouchGFX/App/app_touchgfx.h \
  ../../Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_qspi.h \
  ../../Drivers/BSP/STM32746G-Discovery/../Components/n25q128a/n25q128a.h \
- C:/Users/pedro.mamud/Desktop/CONTROLE_PID_v1_PEDRO/STM32CubeIDE/Drivers/CMSIS/DSP/Include/arm_math.h
+ C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/STM32CubeIDE/Drivers/CMSIS/DSP/Include/arm_math.h
 ../../Core/Inc/main.h:
 ../../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:
 ../../Core/Inc/stm32f7xx_hal_conf.h:
@@ -81,4 +81,4 @@ Application/User/Core/main.o: \
 ../../TouchGFX/App/app_touchgfx.h:
 ../../Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_qspi.h:
 ../../Drivers/BSP/STM32746G-Discovery/../Components/n25q128a/n25q128a.h:
-C:/Users/pedro.mamud/Desktop/CONTROLE_PID_v1_PEDRO/STM32CubeIDE/Drivers/CMSIS/DSP/Include/arm_math.h:
+C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/STM32CubeIDE/Drivers/CMSIS/DSP/Include/arm_math.h:

@@ -1,0 +1,5 @@
+../../TouchGFX/gui/include/gui/screen_refusao_screen/Screen_refusaoPresenter.hpp:28:13:Screen_refusaoPresenter::~Screen_refusaoPresenter()	0	static
+C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/TouchGFX/gui/src/screen_refusao_screen/Screen_refusaoPresenter.cpp:12:6:virtual void Screen_refusaoPresenter::activate()	0	static
+../../TouchGFX/gui/include/gui/screen_refusao_screen/Screen_refusaoPresenter.hpp:28:13:virtual Screen_refusaoPresenter::~Screen_refusaoPresenter()	8	static
+../../TouchGFX/gui/include/gui/screen_refusao_screen/Screen_refusaoPresenter.hpp:28:13:virtual void* Screen_refusaoPresenter::_ZThn4_N23Screen_refusaoPresenterD1Ev()	0	static
+C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/TouchGFX/gui/src/screen_refusao_screen/Screen_refusaoPresenter.cpp:6:1:Screen_refusaoPresenter::Screen_refusaoPresenter(Screen_refusaoView&)	8	static

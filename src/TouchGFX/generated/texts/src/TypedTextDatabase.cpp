@@ -5,20 +5,24 @@
 #include <fonts/GeneratedFont.hpp>
 #include <texts/TypedTextDatabase.hpp>
 
-extern touchgfx::GeneratedFont& getFont_verdana_16_4bpp();
-extern touchgfx::GeneratedFont& getFont_verdana_40_4bpp();
+extern touchgfx::GeneratedFont& getFont_ariblk_15_4bpp();
+extern touchgfx::GeneratedFont& getFont_calibrib_36_4bpp();
+extern touchgfx::GeneratedFont& getFont_arialbd_11_4bpp();
 extern touchgfx::GeneratedFont& getFont_arialbd_14_4bpp();
-extern touchgfx::GeneratedFont& getFont_arialbd_17_4bpp();
 extern touchgfx::GeneratedFont& getFont_verdana_14_4bpp();
 extern touchgfx::GeneratedFont& getFont_ariblk_20_4bpp();
+extern touchgfx::GeneratedFont& getFont_arial_20_4bpp();
+extern touchgfx::GeneratedFont& getFont_arialbd_15_4bpp();
 
 const touchgfx::Font* touchgfx_fonts[] = {
-    &(getFont_verdana_16_4bpp()),
-    &(getFont_verdana_40_4bpp()),
+    &(getFont_ariblk_15_4bpp()),
+    &(getFont_calibrib_36_4bpp()),
+    &(getFont_arialbd_11_4bpp()),
     &(getFont_arialbd_14_4bpp()),
-    &(getFont_arialbd_17_4bpp()),
     &(getFont_verdana_14_4bpp()),
-    &(getFont_ariblk_20_4bpp())
+    &(getFont_ariblk_20_4bpp()),
+    &(getFont_arial_20_4bpp()),
+    &(getFont_arialbd_15_4bpp())
 };
 
 extern const touchgfx::TypedText::TypedTextData typedText_database_DEFAULT[];
@@ -26,6 +30,11 @@ extern const touchgfx::TypedText::TypedTextData* const typedTextDatabaseArray[];
 
 TEXT_LOCATION_FLASH_PRAGMA
 const touchgfx::TypedText::TypedTextData typedText_database_DEFAULT[] TEXT_LOCATION_FLASH_ATTRIBUTE = {
+    { 6, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 1, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_RTL },
+    { 2, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 3, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 3, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
     { 3, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
     { 3, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
     { 3, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
@@ -43,7 +52,7 @@ const touchgfx::TypedText::TypedTextData typedText_database_DEFAULT[] TEXT_LOCAT
     { 0, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
     { 0, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
     { 4, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
-    { 2, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 3, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
     { 3, touchgfx::RIGHT, touchgfx::TEXT_DIRECTION_LTR },
     { 2, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
     { 3, touchgfx::RIGHT, touchgfx::TEXT_DIRECTION_LTR },
@@ -85,22 +94,28 @@ void resetFont(touchgfx::FontId fontId)
     switch (fontId)
     {
     case 0:
-        touchgfx_fonts[0] = &(getFont_verdana_16_4bpp());
+        touchgfx_fonts[0] = &(getFont_ariblk_15_4bpp());
         break;
     case 1:
-        touchgfx_fonts[1] = &(getFont_verdana_40_4bpp());
+        touchgfx_fonts[1] = &(getFont_calibrib_36_4bpp());
         break;
     case 2:
-        touchgfx_fonts[2] = &(getFont_arialbd_14_4bpp());
+        touchgfx_fonts[2] = &(getFont_arialbd_11_4bpp());
         break;
     case 3:
-        touchgfx_fonts[3] = &(getFont_arialbd_17_4bpp());
+        touchgfx_fonts[3] = &(getFont_arialbd_14_4bpp());
         break;
     case 4:
         touchgfx_fonts[4] = &(getFont_verdana_14_4bpp());
         break;
     case 5:
         touchgfx_fonts[5] = &(getFont_ariblk_20_4bpp());
+        break;
+    case 6:
+        touchgfx_fonts[6] = &(getFont_arial_20_4bpp());
+        break;
+    case 7:
+        touchgfx_fonts[7] = &(getFont_arialbd_15_4bpp());
         break;
     }
 }

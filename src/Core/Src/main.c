@@ -257,7 +257,7 @@ int main(void)
 			ReflowParameters.SoakTime = 150;
 			ReflowParameters.SoakTempeture = 150;
 			ReflowParameters.secondHeatUpRate = 0.6;
-			ReflowParameters.ReflowTime = 40;
+			ReflowParameters.ReflowTime = 41;
 			ReflowParameters.ReflowTempeture = 230;
 
 /*

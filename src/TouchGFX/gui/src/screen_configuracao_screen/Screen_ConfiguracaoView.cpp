@@ -15,19 +15,6 @@ void Screen_ConfiguracaoView::tearDownScreen()
     Screen_ConfiguracaoViewBase::tearDownScreen();
 }
 
-void Screen_ConfiguracaoView::up_temperature_patamar1()
-{
-	temperature1++;
-    Unicode::snprintf(TEMPERATURA1Buffer,TEMPERATURA1_SIZE, "%i", temperature1);
-    TEMPERATURA1.invalidate();
-}
 
-void Screen_ConfiguracaoView::down_temperature_patamar1()
-{
-	temperature1--;
-	if (temperature1 <= 0) temperature1 = 0;
-    Unicode::snprintf(TEMPERATURA1Buffer, TEMPERATURA2_SIZE, "%i", temperature1);
-    TEMPERATURA1.invalidate();
-}
 
 

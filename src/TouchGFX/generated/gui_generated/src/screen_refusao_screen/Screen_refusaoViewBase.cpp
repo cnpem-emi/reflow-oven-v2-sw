@@ -9,7 +9,8 @@
 
 
 Screen_refusaoViewBase::Screen_refusaoViewBase() :
-    buttonCallback(this, &Screen_refusaoViewBase::buttonCallbackHandler)
+    buttonCallback(this, &Screen_refusaoViewBase::buttonCallbackHandler),
+    flexButtonCallback(this, &Screen_refusaoViewBase::flexButtonCallbackHandler)
 {
 
     touchgfx::CanvasWidgetRenderer::setupBuffer(canvasBuffer, CANVAS_BUFFER_SIZE);
@@ -20,17 +21,17 @@ Screen_refusaoViewBase::Screen_refusaoViewBase() :
     box1.setPosition(0, 0, 480, 272);
     box1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
 
-    boxWithBorder1_1.setPosition(78, 17, 310, 206);
+    boxWithBorder1_1.setPosition(57, 10, 310, 206);
     boxWithBorder1_1.setColor(touchgfx::Color::getColorFromRGB(247, 247, 247));
     boxWithBorder1_1.setBorderColor(touchgfx::Color::getColorFromRGB(9, 91, 222));
     boxWithBorder1_1.setBorderSize(4);
 
-    boxWithBorder1.setPosition(394, 27, 78, 41);
+    boxWithBorder1.setPosition(389, 27, 78, 41);
     boxWithBorder1.setColor(touchgfx::Color::getColorFromRGB(247, 247, 247));
     boxWithBorder1.setBorderColor(touchgfx::Color::getColorFromRGB(222, 7, 7));
     boxWithBorder1.setBorderSize(5);
 
-    textArea1.setPosition(394, 40, 78, 28);
+    textArea1.setPosition(401, 40, 55, 23);
     textArea1.setColor(touchgfx::Color::getColorFromRGB(242, 10, 10));
     textArea1.setLinespacing(0);
     Unicode::snprintf(textArea1Buffer, TEXTAREA1_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_9G5M).getText());
@@ -38,7 +39,7 @@ Screen_refusaoViewBase::Screen_refusaoViewBase() :
     textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_0DCT));
 
     dynamicGraph1.setScale(1);
-    dynamicGraph1.setPosition(14, 10, 374, 237);
+    dynamicGraph1.setPosition(-7, 3, 374, 237);
     dynamicGraph1.setGraphAreaMargin(6, 55, 2, 14);
     dynamicGraph1.setGraphAreaPadding(3, 9, -16, 0);
     dynamicGraph1.setGraphRangeY(10, 250);
@@ -52,8 +53,7 @@ Screen_refusaoViewBase::Screen_refusaoViewBase() :
     dynamicGraph1MajorYAxisLabel.setScale(1);
     dynamicGraph1MajorYAxisLabel.setInterval(25);
     dynamicGraph1MajorYAxisLabel.setLabelTypedText(touchgfx::TypedText(T___SINGLEUSE_3B84));
-    dynamicGraph1MajorYAxisLabel.setLabelDecimals(2);
-    dynamicGraph1MajorYAxisLabel.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    dynamicGraph1MajorYAxisLabel.setColor(touchgfx::Color::getColorFromRGB(30, 136, 201));
     dynamicGraph1.addLeftElement(dynamicGraph1MajorYAxisLabel);
 
     dynamicGraph1Line1Painter.setColor(touchgfx::Color::getColorFromRGB(196, 22, 22));
@@ -63,7 +63,7 @@ Screen_refusaoViewBase::Screen_refusaoViewBase() :
 
     graph1.setScaleX(1);
     graph1.setScaleY(1);
-    graph1.setPosition(14, 10, 374, 237);
+    graph1.setPosition(-7, 3, 374, 237);
     graph1.setGraphAreaMargin(6, 55, 2, 14);
     graph1.setGraphAreaPadding(3, 9, -16, 0);
     graph1.setGraphRangeX(0, 1199);
@@ -90,7 +90,6 @@ Screen_refusaoViewBase::Screen_refusaoViewBase() :
     graph1MajorYAxisLabel.setScale(1);
     graph1MajorYAxisLabel.setInterval(25);
     graph1MajorYAxisLabel.setLabelTypedText(touchgfx::TypedText(T___SINGLEUSE_YSZ3));
-    graph1MajorYAxisLabel.setLabelDecimals(2);
     graph1MajorYAxisLabel.setColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
     graph1.addLeftElement(graph1MajorYAxisLabel);
 
@@ -99,12 +98,123 @@ Screen_refusaoViewBase::Screen_refusaoViewBase() :
     graph1Line1.setLineWidth(3);
     graph1.addGraphElement(graph1Line1);
 
-    play.setXY(406, 145);
+    graph2.setScaleX(1);
+    graph2.setScaleY(1);
+    graph2.setPosition(-7, 3, 374, 237);
+    graph2.setGraphAreaMargin(6, 55, 2, 14);
+    graph2.setGraphAreaPadding(3, 9, -16, 0);
+    graph2.setGraphRangeX(0, 1199);
+    graph2.setGraphRangeY(10, 250);
+
+    graph2MajorXAxisGrid.setScale(1);
+    graph2MajorXAxisGrid.setColor(touchgfx::Color::getColorFromRGB(20, 151, 197));
+    graph2MajorXAxisGrid.setInterval(100);
+    graph2MajorXAxisGrid.setLineWidth(1);
+    graph2.addGraphElement(graph2MajorXAxisGrid);
+
+    graph2MajorYAxisGrid.setScale(1);
+    graph2MajorYAxisGrid.setColor(touchgfx::Color::getColorFromRGB(20, 151, 197));
+    graph2MajorYAxisGrid.setInterval(25);
+    graph2MajorYAxisGrid.setLineWidth(1);
+    graph2.addGraphElement(graph2MajorYAxisGrid);
+
+    graph2MajorXAxisLabel.setScale(1);
+    graph2MajorXAxisLabel.setInterval(200);
+    graph2MajorXAxisLabel.setLabelTypedText(touchgfx::TypedText(T___SINGLEUSE_M7W9));
+    graph2MajorXAxisLabel.setColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
+    graph2.addBottomElement(graph2MajorXAxisLabel);
+
+    graph2MajorYAxisLabel.setScale(1);
+    graph2MajorYAxisLabel.setInterval(25);
+    graph2MajorYAxisLabel.setLabelTypedText(touchgfx::TypedText(T___SINGLEUSE_FVH2));
+    graph2MajorYAxisLabel.setColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
+    graph2.addLeftElement(graph2MajorYAxisLabel);
+
+    graph2Line1Painter.setColor(touchgfx::Color::getColorFromRGB(23, 194, 32));
+    graph2Line1.setPainter(graph2Line1Painter);
+    graph2Line1.setLineWidth(3);
+    graph2.addGraphElement(graph2Line1);
+
+    graph3.setScaleX(1);
+    graph3.setScaleY(1);
+    graph3.setPosition(-7, 3, 374, 237);
+    graph3.setGraphAreaMargin(6, 55, 2, 14);
+    graph3.setGraphAreaPadding(3, 9, -16, 0);
+    graph3.setGraphRangeX(0, 1199);
+    graph3.setGraphRangeY(10, 250);
+
+    graph3MajorXAxisGrid.setScale(1);
+    graph3MajorXAxisGrid.setColor(touchgfx::Color::getColorFromRGB(20, 151, 197));
+    graph3MajorXAxisGrid.setInterval(100);
+    graph3MajorXAxisGrid.setLineWidth(1);
+    graph3.addGraphElement(graph3MajorXAxisGrid);
+
+    graph3MajorYAxisGrid.setScale(1);
+    graph3MajorYAxisGrid.setColor(touchgfx::Color::getColorFromRGB(20, 151, 197));
+    graph3MajorYAxisGrid.setInterval(25);
+    graph3MajorYAxisGrid.setLineWidth(1);
+    graph3.addGraphElement(graph3MajorYAxisGrid);
+
+    graph3MajorXAxisLabel.setScale(1);
+    graph3MajorXAxisLabel.setInterval(200);
+    graph3MajorXAxisLabel.setLabelTypedText(touchgfx::TypedText(T___SINGLEUSE_L5P4));
+    graph3MajorXAxisLabel.setColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
+    graph3.addBottomElement(graph3MajorXAxisLabel);
+
+    graph3MajorYAxisLabel.setScale(1);
+    graph3MajorYAxisLabel.setInterval(25);
+    graph3MajorYAxisLabel.setLabelTypedText(touchgfx::TypedText(T___SINGLEUSE_B5HN));
+    graph3MajorYAxisLabel.setColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
+    graph3.addLeftElement(graph3MajorYAxisLabel);
+
+    graph3Line1Painter.setColor(touchgfx::Color::getColorFromRGB(23, 194, 32));
+    graph3Line1.setPainter(graph3Line1Painter);
+    graph3Line1.setLineWidth(3);
+    graph3.addGraphElement(graph3Line1);
+
+    graph4.setScaleX(1);
+    graph4.setScaleY(1);
+    graph4.setPosition(-7, 3, 374, 237);
+    graph4.setGraphAreaMargin(6, 55, 2, 14);
+    graph4.setGraphAreaPadding(3, 9, -16, 0);
+    graph4.setGraphRangeX(0, 1199);
+    graph4.setGraphRangeY(10, 250);
+
+    graph4MajorXAxisGrid.setScale(1);
+    graph4MajorXAxisGrid.setColor(touchgfx::Color::getColorFromRGB(20, 151, 197));
+    graph4MajorXAxisGrid.setInterval(100);
+    graph4MajorXAxisGrid.setLineWidth(1);
+    graph4.addGraphElement(graph4MajorXAxisGrid);
+
+    graph4MajorYAxisGrid.setScale(1);
+    graph4MajorYAxisGrid.setColor(touchgfx::Color::getColorFromRGB(20, 151, 197));
+    graph4MajorYAxisGrid.setInterval(25);
+    graph4MajorYAxisGrid.setLineWidth(1);
+    graph4.addGraphElement(graph4MajorYAxisGrid);
+
+    graph4MajorXAxisLabel.setScale(1);
+    graph4MajorXAxisLabel.setInterval(200);
+    graph4MajorXAxisLabel.setLabelTypedText(touchgfx::TypedText(T___SINGLEUSE_RU89));
+    graph4MajorXAxisLabel.setColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
+    graph4.addBottomElement(graph4MajorXAxisLabel);
+
+    graph4MajorYAxisLabel.setScale(1);
+    graph4MajorYAxisLabel.setInterval(25);
+    graph4MajorYAxisLabel.setLabelTypedText(touchgfx::TypedText(T___SINGLEUSE_RU06));
+    graph4MajorYAxisLabel.setColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
+    graph4.addLeftElement(graph4MajorYAxisLabel);
+
+    graph4Line1Painter.setColor(touchgfx::Color::getColorFromRGB(23, 194, 32));
+    graph4Line1.setPainter(graph4Line1Painter);
+    graph4Line1.setLineWidth(3);
+    graph4.addGraphElement(graph4Line1);
+
+    play.setXY(367, 212);
     play.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_BLUE_ICONS_POWER_32_ID), touchgfx::Bitmap(BITMAP_BLUE_ICONS_POWER_32_ID));
     play.setIconXY(16, 16);
     play.setAction(buttonCallback);
 
-    textArea2.setXY(409, 68);
+    textArea2.setXY(415, 68);
     textArea2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea2.setLinespacing(0);
     Unicode::snprintf(textArea2Buffer, TEXTAREA2_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_2C0T).getText());
@@ -112,33 +222,71 @@ Screen_refusaoViewBase::Screen_refusaoViewBase() :
     textArea2.resizeToCurrentText();
     textArea2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_A9G3));
 
-    perfil.setXY(406, 85);
-    perfil.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_ICON_BUTTON_ID));
-    perfil.setLabelText(touchgfx::TypedText(T___SINGLEUSE_5A6H));
-    perfil.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    perfil.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    perfil.setAction(buttonCallback);
-
-    Config.setXY(406, 205);
-    Config.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_BLUE_ICONS_SETTINGS_32_ID), touchgfx::Bitmap(BITMAP_BLUE_ICONS_SETTINGS_32_ID));
+    Config.setXY(420, 212);
+    Config.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_BLUE_ICONS_INFO_32_ID), touchgfx::Bitmap(BITMAP_BLUE_ICONS_INFO_32_ID));
     Config.setIconXY(15, 15);
     Config.setAction(buttonCallback);
 
-    textArea3.setPosition(7, 49, 15, 174);
+    textArea3.setPosition(5, 63, 15, 121);
     textArea3.setColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
     textArea3.setLinespacing(0);
     textArea3.setRotation(touchgfx::TEXT_ROTATE_270);
     textArea3.setTypedText(touchgfx::TypedText(T___SINGLEUSE_2YZ1));
 
-    textArea3_1.setPosition(180, 255, 72, 17);
+    textArea3_1.setPosition(176, 242, 72, 17);
     textArea3_1.setColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
     textArea3_1.setLinespacing(0);
     textArea3_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_Y0HR));
 
-    textArea3_1_1.setPosition(388, 10, 89, 13);
+    textArea3_1_1.setPosition(383, 10, 89, 13);
     textArea3_1_1.setColor(touchgfx::Color::getColorFromRGB(255, 0, 0));
     textArea3_1_1.setLinespacing(0);
     textArea3_1_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_YTN9));
+
+    perfil.setBoxWithBorderPosition(0, 0, 91, 18);
+    perfil.setBorderSize(1);
+    perfil.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(125, 201, 240), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(8, 98, 255), touchgfx::Color::getColorFromRGB(0, 94, 255));
+    perfil.setText(TypedText(T___SINGLEUSE_YC5G));
+    perfil.setTextPosition(0, 0, 91, 18);
+    perfil.setTextColors(touchgfx::Color::getColorFromRGB(10, 10, 10), touchgfx::Color::getColorFromRGB(10, 10, 10));
+    perfil.setPosition(382, 95, 91, 18);
+    perfil.setAction(flexButtonCallback);
+
+    perfil_2.setBoxWithBorderPosition(0, 0, 91, 18);
+    perfil_2.setBorderSize(1);
+    perfil_2.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(125, 201, 240), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(8, 98, 255), touchgfx::Color::getColorFromRGB(0, 94, 255));
+    perfil_2.setText(TypedText(T___SINGLEUSE_7YOW));
+    perfil_2.setTextPosition(0, 0, 91, 18);
+    perfil_2.setTextColors(touchgfx::Color::getColorFromRGB(10, 10, 10), touchgfx::Color::getColorFromRGB(10, 10, 10));
+    perfil_2.setPosition(382, 123, 91, 18);
+    perfil_2.setAction(flexButtonCallback);
+
+    perfil_3.setBoxWithBorderPosition(0, 0, 91, 18);
+    perfil_3.setBorderSize(1);
+    perfil_3.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(125, 201, 240), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(8, 98, 255), touchgfx::Color::getColorFromRGB(0, 94, 255));
+    perfil_3.setText(TypedText(T___SINGLEUSE_S581));
+    perfil_3.setTextPosition(0, 0, 91, 18);
+    perfil_3.setTextColors(touchgfx::Color::getColorFromRGB(10, 10, 10), touchgfx::Color::getColorFromRGB(10, 10, 10));
+    perfil_3.setPosition(383, 153, 91, 18);
+    perfil_3.setAction(flexButtonCallback);
+
+    perfil_4.setBoxWithBorderPosition(0, 0, 91, 18);
+    perfil_4.setBorderSize(1);
+    perfil_4.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(125, 201, 240), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(8, 98, 255), touchgfx::Color::getColorFromRGB(0, 94, 255));
+    perfil_4.setText(TypedText(T___SINGLEUSE_1VLN));
+    perfil_4.setTextPosition(0, 0, 91, 18);
+    perfil_4.setTextColors(touchgfx::Color::getColorFromRGB(10, 10, 10), touchgfx::Color::getColorFromRGB(10, 10, 10));
+    perfil_4.setPosition(383, 184, 91, 18);
+    perfil_4.setAction(flexButtonCallback);
+
+    clear_button.setBoxWithBorderPosition(0, 0, 91, 18);
+    clear_button.setBorderSize(1);
+    clear_button.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(125, 201, 240), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(8, 98, 255), touchgfx::Color::getColorFromRGB(51, 102, 153));
+    clear_button.setText(TypedText(T___SINGLEUSE_1OWB));
+    clear_button.setTextPosition(0, 0, 91, 18);
+    clear_button.setTextColors(touchgfx::Color::getColorFromRGB(10, 10, 10), touchgfx::Color::getColorFromRGB(10, 10, 10));
+    clear_button.setPosition(29, 250, 91, 18);
+    clear_button.setAction(flexButtonCallback);
 
     add(__background);
     add(box1);
@@ -147,13 +295,20 @@ Screen_refusaoViewBase::Screen_refusaoViewBase() :
     add(textArea1);
     add(dynamicGraph1);
     add(graph1);
+    add(graph2);
+    add(graph3);
+    add(graph4);
     add(play);
     add(textArea2);
-    add(perfil);
     add(Config);
     add(textArea3);
     add(textArea3_1);
     add(textArea3_1_1);
+    add(perfil);
+    add(perfil_2);
+    add(perfil_3);
+    add(perfil_4);
+    add(clear_button);
 }
 
 void Screen_refusaoViewBase::setupScreen()
@@ -175,18 +330,50 @@ void Screen_refusaoViewBase::buttonCallbackHandler(const touchgfx::AbstractButto
         //Call startReflow
         startReflow();
     }
-    else if (&src == &perfil)
-    {
-        //Interaction2
-        //When perfil clicked call virtual function
-        //Call profile
-        profile();
-    }
     else if (&src == &Config)
     {
         //Interaction4
         //When Config clicked change screen to Screen_Configuracao
         //Go to Screen_Configuracao with no screen transition
         application().gotoScreen_ConfiguracaoScreenNoTransition();
+    }
+}
+
+void Screen_refusaoViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src)
+{
+    if (&src == &perfil)
+    {
+        //Interaction2
+        //When perfil clicked call virtual function
+        //Call profile
+        profile();
+    }
+    else if (&src == &perfil_2)
+    {
+        //Interaction5
+        //When perfil_2 clicked call virtual function
+        //Call profile_2
+        profile_2();
+    }
+    else if (&src == &perfil_3)
+    {
+        //Interaction6
+        //When perfil_3 clicked call virtual function
+        //Call profile_3
+        profile_3();
+    }
+    else if (&src == &perfil_4)
+    {
+        //Interaction7
+        //When perfil_4 clicked call virtual function
+        //Call profile_4
+        profile_4();
+    }
+    else if (&src == &clear_button)
+    {
+        //Interaction8
+        //When clear_button clicked call virtual function
+        //Call clear
+        clear();
     }
 }

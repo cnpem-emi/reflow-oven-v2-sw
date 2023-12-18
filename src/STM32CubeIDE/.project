@@ -314,9 +314,9 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Font_arialbd_15_4bpp_0.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/generated/Font_ariblk_15_4bpp_0.cpp</name>
+			<name>Application/User/generated/Font_ariblk_10_4bpp_0.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Font_ariblk_15_4bpp_0.cpp</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Font_ariblk_10_4bpp_0.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/Font_ariblk_20_4bpp_0.cpp</name>
@@ -359,9 +359,9 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Kerning_arialbd_15_4bpp.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/generated/Kerning_ariblk_15_4bpp.cpp</name>
+			<name>Application/User/generated/Kerning_ariblk_10_4bpp.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Kerning_ariblk_15_4bpp.cpp</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Kerning_ariblk_10_4bpp.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/Kerning_ariblk_20_4bpp.cpp</name>
@@ -399,9 +399,9 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Table_arialbd_15_4bpp.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/generated/Table_ariblk_15_4bpp.cpp</name>
+			<name>Application/User/generated/Table_ariblk_10_4bpp.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Table_ariblk_15_4bpp.cpp</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Table_ariblk_10_4bpp.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/Table_ariblk_20_4bpp.cpp</name>
@@ -459,24 +459,14 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__designer/image_Blue_Icons_Back_arrow_32.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/generated/image_Blue_Icons_Down_arrow_32.cpp</name>
+			<name>Application/User/generated/image_Blue_Icons_Info_32.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__designer/image_Blue_Icons_Down_arrow_32.cpp</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__designer/image_Blue_Icons_Info_32.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/image_Blue_Icons_Power_32.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__designer/image_Blue_Icons_Power_32.cpp</locationURI>
-		</link>
-		<link>
-			<name>Application/User/generated/image_Blue_Icons_Settings_32.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__designer/image_Blue_Icons_Settings_32.cpp</locationURI>
-		</link>
-		<link>
-			<name>Application/User/generated/image_Blue_Icons_Up_arrow_32.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__designer/image_Blue_Icons_Up_arrow_32.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/image_cnpem.cpp</name>

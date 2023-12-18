@@ -1,10 +1,14 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	1
 ../../TouchGFX/gui/include/gui/screen_refusao_screen/Screen_refusaoView.hpp:11:13:Screen_refusaoView::~Screen_refusaoView()	1
-C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/TouchGFX/gui/src/screen_refusao_screen/Screen_refusaoView.cpp:19:6:virtual void Screen_refusaoView::tearDownScreen()	1
-C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/TouchGFX/gui/src/screen_refusao_screen/Screen_refusaoView.cpp:13:6:virtual void Screen_refusaoView::setupScreen()	1
-C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/TouchGFX/gui/src/screen_refusao_screen/Screen_refusaoView.cpp:25:6:virtual void Screen_refusaoView::handleTickEvent()	2
-C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/TouchGFX/gui/src/screen_refusao_screen/Screen_refusaoView.cpp:39:6:virtual void Screen_refusaoView::profile()	2
-C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/TouchGFX/gui/src/screen_refusao_screen/Screen_refusaoView.cpp:54:6:virtual void Screen_refusaoView::startReflow()	1
+C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/TouchGFX/gui/src/screen_refusao_screen/Screen_refusaoView.cpp:34:6:virtual void Screen_refusaoView::tearDownScreen()	1
+C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/TouchGFX/gui/src/screen_refusao_screen/Screen_refusaoView.cpp:28:6:virtual void Screen_refusaoView::setupScreen()	1
+C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/TouchGFX/gui/src/screen_refusao_screen/Screen_refusaoView.cpp:40:6:virtual void Screen_refusaoView::handleTickEvent()	2
+C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/TouchGFX/gui/src/screen_refusao_screen/Screen_refusaoView.cpp:53:6:virtual void Screen_refusaoView::profile()	2
+C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/TouchGFX/gui/src/screen_refusao_screen/Screen_refusaoView.cpp:76:6:virtual void Screen_refusaoView::profile_2()	2
+C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/TouchGFX/gui/src/screen_refusao_screen/Screen_refusaoView.cpp:97:6:virtual void Screen_refusaoView::profile_3()	2
+C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/TouchGFX/gui/src/screen_refusao_screen/Screen_refusaoView.cpp:115:6:virtual void Screen_refusaoView::profile_4()	2
+C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/TouchGFX/gui/src/screen_refusao_screen/Screen_refusaoView.cpp:134:6:virtual void Screen_refusaoView::clear()	1
+C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/TouchGFX/gui/src/screen_refusao_screen/Screen_refusaoView.cpp:145:6:virtual void Screen_refusaoView::startReflow()	1
 ../../TouchGFX/gui/include/gui/screen_refusao_screen/Screen_refusaoView.hpp:11:13:virtual Screen_refusaoView::~Screen_refusaoView()	1
-C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/TouchGFX/gui/src/screen_refusao_screen/Screen_refusaoView.cpp:8:1:Screen_refusaoView::Screen_refusaoView()	1
+C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/TouchGFX/gui/src/screen_refusao_screen/Screen_refusaoView.cpp:23:1:Screen_refusaoView::Screen_refusaoView()	1

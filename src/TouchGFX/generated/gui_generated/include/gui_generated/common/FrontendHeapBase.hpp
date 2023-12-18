@@ -14,10 +14,10 @@
 
 #include <gui/screen_inicializacao_screen/Screen_inicializacaoView.hpp>
 #include <gui/screen_inicializacao_screen/Screen_inicializacaoPresenter.hpp>
-#include <gui/screen_configuracao_screen/Screen_ConfiguracaoView.hpp>
-#include <gui/screen_configuracao_screen/Screen_ConfiguracaoPresenter.hpp>
 #include <gui/screen_refusao_screen/Screen_refusaoView.hpp>
 #include <gui/screen_refusao_screen/Screen_refusaoPresenter.hpp>
+#include <gui/screen_configuracao_screen/Screen_ConfiguracaoView.hpp>
+#include <gui/screen_configuracao_screen/Screen_ConfiguracaoPresenter.hpp>
 
 
 /**
@@ -41,8 +41,8 @@ public:
      * @note All view types used in the application MUST be added to this list!
      */
     typedef touchgfx::meta::TypeList< Screen_inicializacaoView,
-            touchgfx::meta::TypeList< Screen_ConfiguracaoView,
             touchgfx::meta::TypeList< Screen_refusaoView,
+            touchgfx::meta::TypeList< Screen_ConfiguracaoView,
             touchgfx::meta::Nil > >
             > GeneratedViewTypes;
 
@@ -56,8 +56,8 @@ public:
      * @note All presenter types used in the application MUST be added to this list!
      */
     typedef touchgfx::meta::TypeList< Screen_inicializacaoPresenter,
-            touchgfx::meta::TypeList< Screen_ConfiguracaoPresenter,
             touchgfx::meta::TypeList< Screen_refusaoPresenter,
+            touchgfx::meta::TypeList< Screen_ConfiguracaoPresenter,
             touchgfx::meta::Nil > >
             > GeneratedPresenterTypes;
 

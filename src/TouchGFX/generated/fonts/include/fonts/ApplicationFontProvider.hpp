@@ -21,11 +21,12 @@ struct Typography
     static const touchgfx::FontId VALORES = 5;
     static const touchgfx::FontId TELA_INICIAL = 6;
     static const touchgfx::FontId BOTAO_INICIAR = 7;
+    static const touchgfx::FontId INFORMACOES = 8;
 };
 
 struct TypographyFontIndex
 {
-    static const touchgfx::FontId DEFAULT = 0;       // ariblk_15_4bpp
+    static const touchgfx::FontId DEFAULT = 0;       // ariblk_10_4bpp
     static const touchgfx::FontId LARGE = 1;         // calibrib_36_4bpp
     static const touchgfx::FontId SMALL = 2;         // arialbd_11_4bpp
     static const touchgfx::FontId TEMP = 3;          // arialbd_14_4bpp
@@ -33,6 +34,7 @@ struct TypographyFontIndex
     static const touchgfx::FontId VALORES = 5;       // ariblk_20_4bpp
     static const touchgfx::FontId TELA_INICIAL = 6;  // arial_20_4bpp
     static const touchgfx::FontId BOTAO_INICIAR = 7; // arialbd_15_4bpp
+    static const touchgfx::FontId INFORMACOES = 6;   // arial_20_4bpp
     static const uint16_t NUMBER_OF_FONTS = 8;
 };
 

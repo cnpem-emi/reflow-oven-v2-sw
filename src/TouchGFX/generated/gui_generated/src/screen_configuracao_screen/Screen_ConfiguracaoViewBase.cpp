@@ -16,137 +16,50 @@ Screen_ConfiguracaoViewBase::Screen_ConfiguracaoViewBase() :
     box1.setPosition(0, 0, 480, 272);
     box1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
 
-    retornar.setXY(420, 127);
+    retornar.setXY(17, 202);
     retornar.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_BLUE_ICONS_BACK_ARROW_32_ID), touchgfx::Bitmap(BITMAP_BLUE_ICONS_BACK_ARROW_32_ID));
-    retornar.setIconXY(22, 15);
+    retornar.setIconXY(20, 15);
     retornar.setAction(buttonCallback);
 
-    textArea1.setPosition(17, 11, 228, 30);
-    textArea1.setColor(touchgfx::Color::getColorFromRGB(76, 207, 43));
+    textArea1.setPosition(156, 11, 169, 34);
+    textArea1.setColor(touchgfx::Color::getColorFromRGB(12, 157, 235));
     textArea1.setLinespacing(0);
     textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_TZMU));
 
-    textArea1_1.setPosition(20, 41, 222, 29);
-    textArea1_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    textArea1_1.setLinespacing(0);
-    textArea1_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_YLEF));
+    textArea2.setXY(26, 60);
+    textArea2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea2.setLinespacing(0);
+    textArea2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_NJ11));
 
-    textArea1_2.setPosition(17, 143, 260, 31);
-    textArea1_2.setColor(touchgfx::Color::getColorFromRGB(237, 24, 24));
-    textArea1_2.setLinespacing(0);
-    textArea1_2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_2Q4Q));
+    textArea2_1.setXY(26, 94);
+    textArea2_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea2_1.setLinespacing(0);
+    textArea2_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_OHPE));
 
-    textArea1_1_1_1.setPosition(288, 41, 120, 29);
-    textArea1_1_1_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    textArea1_1_1_1.setLinespacing(0);
-    textArea1_1_1_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_9WQB));
+    textArea2_2.setXY(26, 126);
+    textArea2_2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea2_2.setLinespacing(0);
+    textArea2_2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_JZCA));
 
-    box2.setPosition(70, 70, 123, 31);
-    box2.setColor(touchgfx::Color::getColorFromRGB(87, 143, 173));
+    textArea2_3.setXY(26, 159);
+    textArea2_3.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea2_3.setLinespacing(0);
+    textArea2_3.setTypedText(touchgfx::TypedText(T___SINGLEUSE_T9R1));
 
-    box2_1.setPosition(287, 70, 123, 31);
-    box2_1.setColor(touchgfx::Color::getColorFromRGB(87, 143, 173));
-
-    TEMPERATURA1.setPosition(101, 76, 61, 18);
-    TEMPERATURA1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    TEMPERATURA1.setLinespacing(0);
-    Unicode::snprintf(TEMPERATURA1Buffer, TEMPERATURA1_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_E0G2).getText());
-    TEMPERATURA1.setWildcard(TEMPERATURA1Buffer);
-    TEMPERATURA1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_ZWSN));
-
-    TEMPO1.setPosition(318, 76, 61, 18);
-    TEMPO1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    TEMPO1.setLinespacing(0);
-    Unicode::snprintf(TEMPO1Buffer, TEMPO1_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_8C44).getText());
-    TEMPO1.setWildcard(TEMPO1Buffer);
-    TEMPO1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_L7G9));
-
-    button_up_temperature_patamar1.setXY(70, 110);
-    button_up_temperature_patamar1.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_ICONS_UP_ARROW_32_ID), touchgfx::Bitmap(BITMAP_BLUE_ICONS_UP_ARROW_32_ID));
-    button_up_temperature_patamar1.setAction(buttonCallback);
-
-    button_up_tempo_patamar1.setXY(288, 110);
-    button_up_tempo_patamar1.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_ICONS_UP_ARROW_32_ID), touchgfx::Bitmap(BITMAP_BLUE_ICONS_UP_ARROW_32_ID));
-
-    button2_down_temperature_patamar1.setXY(162, 110);
-    button2_down_temperature_patamar1.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_ICONS_DOWN_ARROW_32_ID), touchgfx::Bitmap(BITMAP_BLUE_ICONS_DOWN_ARROW_32_ID));
-    button2_down_temperature_patamar1.setAction(buttonCallback);
-
-    button_down_tempo_patamar1.setXY(380, 110);
-    button_down_tempo_patamar1.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_ICONS_DOWN_ARROW_32_ID), touchgfx::Bitmap(BITMAP_BLUE_ICONS_DOWN_ARROW_32_ID));
-
-    textArea1_1_1.setPosition(15, 174, 222, 29);
-    textArea1_1_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    textArea1_1_1.setLinespacing(0);
-    textArea1_1_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_CJRQ));
-
-    textArea1_1_1_1_1.setPosition(283, 174, 120, 29);
-    textArea1_1_1_1_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    textArea1_1_1_1_1.setLinespacing(0);
-    textArea1_1_1_1_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_J636));
-
-    box2_2.setPosition(65, 203, 123, 31);
-    box2_2.setColor(touchgfx::Color::getColorFromRGB(87, 143, 173));
-
-    box2_1_1.setPosition(282, 203, 123, 31);
-    box2_1_1.setColor(touchgfx::Color::getColorFromRGB(87, 143, 173));
-
-    TEMPERATURA2.setPosition(96, 209, 61, 18);
-    TEMPERATURA2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    TEMPERATURA2.setLinespacing(0);
-    Unicode::snprintf(TEMPERATURA2Buffer, TEMPERATURA2_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_T4BR).getText());
-    TEMPERATURA2.setWildcard(TEMPERATURA2Buffer);
-    TEMPERATURA2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_1JKI));
-
-    TEMPO2.setPosition(313, 209, 61, 18);
-    TEMPO2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    TEMPO2.setLinespacing(0);
-    Unicode::snprintf(TEMPO2Buffer, TEMPO2_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_31BF).getText());
-    TEMPO2.setWildcard(TEMPO2Buffer);
-    TEMPO2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_CF4B));
-
-    button_up_temperature_patamar2.setXY(65, 243);
-    button_up_temperature_patamar2.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_ICONS_UP_ARROW_32_ID), touchgfx::Bitmap(BITMAP_BLUE_ICONS_UP_ARROW_32_ID));
-
-    button_up_tempo_patamar2.setXY(283, 243);
-    button_up_tempo_patamar2.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_ICONS_UP_ARROW_32_ID), touchgfx::Bitmap(BITMAP_BLUE_ICONS_UP_ARROW_32_ID));
-
-    button_down_temperature_patamar2.setXY(157, 243);
-    button_down_temperature_patamar2.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_ICONS_DOWN_ARROW_32_ID), touchgfx::Bitmap(BITMAP_BLUE_ICONS_DOWN_ARROW_32_ID));
-
-    button_down_tempo_patamar2.setXY(375, 243);
-    button_down_tempo_patamar2.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_ICONS_DOWN_ARROW_32_ID), touchgfx::Bitmap(BITMAP_BLUE_ICONS_DOWN_ARROW_32_ID));
-
-    button_save.setXY(420, 200);
-    button_save.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_ICON_BUTTON_ID), touchgfx::Bitmap(BITMAP_BLUE_BUTTONS_ROUND_ICON_BUTTON_ID));
-    button_save.setAction(buttonCallback);
+    textArea2_3_1.setPosition(295, 247, 175, 15);
+    textArea2_3_1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    textArea2_3_1.setLinespacing(0);
+    textArea2_3_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_HFKY));
 
     add(__background);
     add(box1);
     add(retornar);
     add(textArea1);
-    add(textArea1_1);
-    add(textArea1_2);
-    add(textArea1_1_1_1);
-    add(box2);
-    add(box2_1);
-    add(TEMPERATURA1);
-    add(TEMPO1);
-    add(button_up_temperature_patamar1);
-    add(button_up_tempo_patamar1);
-    add(button2_down_temperature_patamar1);
-    add(button_down_tempo_patamar1);
-    add(textArea1_1_1);
-    add(textArea1_1_1_1_1);
-    add(box2_2);
-    add(box2_1_1);
-    add(TEMPERATURA2);
-    add(TEMPO2);
-    add(button_up_temperature_patamar2);
-    add(button_up_tempo_patamar2);
-    add(button_down_temperature_patamar2);
-    add(button_down_tempo_patamar2);
-    add(button_save);
+    add(textArea2);
+    add(textArea2_1);
+    add(textArea2_2);
+    add(textArea2_3);
+    add(textArea2_3_1);
 }
 
 void Screen_ConfiguracaoViewBase::setupScreen()
@@ -162,31 +75,5 @@ void Screen_ConfiguracaoViewBase::buttonCallbackHandler(const touchgfx::Abstract
         //When retornar clicked change screen to Screen_refusao
         //Go to Screen_refusao with no screen transition
         application().gotoScreen_refusaoScreenNoTransition();
-    }
-    else if (&src == &button_up_temperature_patamar1)
-    {
-        //Interaction3
-        //When button_up_temperature_patamar1 clicked call virtual function
-        //Call up_temperature_patamar1
-        up_temperature_patamar1();
-    }
-    else if (&src == &button2_down_temperature_patamar1)
-    {
-        //Interaction4
-        //When button2_down_temperature_patamar1 clicked call virtual function
-        //Call down_temperature_patamar1
-        down_temperature_patamar1();
-    }
-    else if (&src == &button_save)
-    {
-        //Interaction2
-        //When button_save clicked call virtual function
-        //Call save_configuration
-        save_configuration();
-
-        //Interaction5
-        //When button_save clicked call virtual function
-        //Call save
-        save();
     }
 }

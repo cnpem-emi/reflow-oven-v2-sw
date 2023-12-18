@@ -14,26 +14,25 @@ public:
 
     virtual void handleTickEvent();
     virtual void profile();
+    virtual void profile_2();
+    virtual void profile_3();
+    virtual void profile_4();
+    virtual void clear();
     virtual void startReflow();
 
     volatile int ReflowIndex=0;
     volatile int PhaseIndex[5]={0};
 
+
+
+
 protected:
 
-    //int cont;
-        //int index = 0;
-        int TempDrawCounter = 0;
-        float dx = 0.3;  //275px / 660s / 500 ms
-        float dy = 0.6;   //175px / 245 Grad
 
-        //int ReflowIndex=0;
-        //int PhaseIndex[5]={0};
-
-         //volatile int ReflowIndex=0;
-         //volatile int PhaseIndex[5]={0};
-         volatile int ind = 15;
-
+         volatile uint16_t ind = 15;
+         volatile uint16_t ind2 = 15;
+         volatile uint16_t ind3 = 15;
+         volatile uint16_t ind4 = 15;
 
 
 };

@@ -10,8 +10,6 @@
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/ButtonWithIcon.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
-#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
-#include <touchgfx/widgets/Button.hpp>
 
 class Screen_ConfiguracaoViewBase : public touchgfx::View<Screen_ConfiguracaoPresenter>
 {
@@ -19,29 +17,6 @@ public:
     Screen_ConfiguracaoViewBase();
     virtual ~Screen_ConfiguracaoViewBase() {}
     virtual void setupScreen();
-
-    /*
-     * Virtual Action Handlers
-     */
-    virtual void save_configuration()
-    {
-        // Override and implement this function in Screen_Configuracao
-    }
-
-    virtual void up_temperature_patamar1()
-    {
-        // Override and implement this function in Screen_Configuracao
-    }
-
-    virtual void down_temperature_patamar1()
-    {
-        // Override and implement this function in Screen_Configuracao
-    }
-
-    virtual void save()
-    {
-        // Override and implement this function in Screen_Configuracao
-    }
 
 protected:
     FrontendApplication& application() {
@@ -55,40 +30,11 @@ protected:
     touchgfx::Box box1;
     touchgfx::ButtonWithIcon retornar;
     touchgfx::TextArea textArea1;
-    touchgfx::TextArea textArea1_1;
-    touchgfx::TextArea textArea1_2;
-    touchgfx::TextArea textArea1_1_1_1;
-    touchgfx::Box box2;
-    touchgfx::Box box2_1;
-    touchgfx::TextAreaWithOneWildcard TEMPERATURA1;
-    touchgfx::TextAreaWithOneWildcard TEMPO1;
-    touchgfx::Button button_up_temperature_patamar1;
-    touchgfx::Button button_up_tempo_patamar1;
-    touchgfx::Button button2_down_temperature_patamar1;
-    touchgfx::Button button_down_tempo_patamar1;
-    touchgfx::TextArea textArea1_1_1;
-    touchgfx::TextArea textArea1_1_1_1_1;
-    touchgfx::Box box2_2;
-    touchgfx::Box box2_1_1;
-    touchgfx::TextAreaWithOneWildcard TEMPERATURA2;
-    touchgfx::TextAreaWithOneWildcard TEMPO2;
-    touchgfx::Button button_up_temperature_patamar2;
-    touchgfx::Button button_up_tempo_patamar2;
-    touchgfx::Button button_down_temperature_patamar2;
-    touchgfx::Button button_down_tempo_patamar2;
-    touchgfx::Button button_save;
-
-    /*
-     * Wildcard Buffers
-     */
-    static const uint16_t TEMPERATURA1_SIZE = 4;
-    touchgfx::Unicode::UnicodeChar TEMPERATURA1Buffer[TEMPERATURA1_SIZE];
-    static const uint16_t TEMPO1_SIZE = 10;
-    touchgfx::Unicode::UnicodeChar TEMPO1Buffer[TEMPO1_SIZE];
-    static const uint16_t TEMPERATURA2_SIZE = 10;
-    touchgfx::Unicode::UnicodeChar TEMPERATURA2Buffer[TEMPERATURA2_SIZE];
-    static const uint16_t TEMPO2_SIZE = 10;
-    touchgfx::Unicode::UnicodeChar TEMPO2Buffer[TEMPO2_SIZE];
+    touchgfx::TextArea textArea2;
+    touchgfx::TextArea textArea2_1;
+    touchgfx::TextArea textArea2_2;
+    touchgfx::TextArea textArea2_3;
+    touchgfx::TextArea textArea2_3_1;
 
 private:
 

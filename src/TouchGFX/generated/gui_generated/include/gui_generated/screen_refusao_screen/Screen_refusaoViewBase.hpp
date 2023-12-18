@@ -16,8 +16,8 @@
 #include <touchgfx/widgets/graph/GraphLabels.hpp>
 #include <touchgfx/widgets/graph/Graph.hpp>
 #include <touchgfx/widgets/ButtonWithIcon.hpp>
-#include <touchgfx/widgets/ButtonWithLabel.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
+#include <touchgfx/containers/buttons/Buttons.hpp>
 #include <touchgfx/EasingEquations.hpp>
 #include <touchgfx/mixins/MoveAnimator.hpp>
 
@@ -42,6 +42,26 @@ public:
     }
 
     virtual void startReflow()
+    {
+        // Override and implement this function in Screen_refusao
+    }
+
+    virtual void profile_2()
+    {
+        // Override and implement this function in Screen_refusao
+    }
+
+    virtual void profile_3()
+    {
+        // Override and implement this function in Screen_refusao
+    }
+
+    virtual void profile_4()
+    {
+        // Override and implement this function in Screen_refusao
+    }
+
+    virtual void clear()
     {
         // Override and implement this function in Screen_refusao
     }
@@ -71,13 +91,38 @@ protected:
     touchgfx::GraphElementGridY graph1MajorYAxisGrid;
     touchgfx::GraphLabelsX graph1MajorXAxisLabel;
     touchgfx::GraphLabelsY graph1MajorYAxisLabel;
+    touchgfx::MoveAnimator< touchgfx::Graph<4000> > graph2;
+    touchgfx::GraphElementLine graph2Line1;
+    touchgfx::PainterRGB565 graph2Line1Painter;
+    touchgfx::GraphElementGridX graph2MajorXAxisGrid;
+    touchgfx::GraphElementGridY graph2MajorYAxisGrid;
+    touchgfx::GraphLabelsX graph2MajorXAxisLabel;
+    touchgfx::GraphLabelsY graph2MajorYAxisLabel;
+    touchgfx::MoveAnimator< touchgfx::Graph<4000> > graph3;
+    touchgfx::GraphElementLine graph3Line1;
+    touchgfx::PainterRGB565 graph3Line1Painter;
+    touchgfx::GraphElementGridX graph3MajorXAxisGrid;
+    touchgfx::GraphElementGridY graph3MajorYAxisGrid;
+    touchgfx::GraphLabelsX graph3MajorXAxisLabel;
+    touchgfx::GraphLabelsY graph3MajorYAxisLabel;
+    touchgfx::MoveAnimator< touchgfx::Graph<4000> > graph4;
+    touchgfx::GraphElementLine graph4Line1;
+    touchgfx::PainterRGB565 graph4Line1Painter;
+    touchgfx::GraphElementGridX graph4MajorXAxisGrid;
+    touchgfx::GraphElementGridY graph4MajorYAxisGrid;
+    touchgfx::GraphLabelsX graph4MajorXAxisLabel;
+    touchgfx::GraphLabelsY graph4MajorYAxisLabel;
     touchgfx::ButtonWithIcon play;
     touchgfx::TextAreaWithOneWildcard textArea2;
-    touchgfx::ButtonWithLabel perfil;
     touchgfx::ButtonWithIcon Config;
     touchgfx::TextArea textArea3;
     touchgfx::TextArea textArea3_1;
     touchgfx::TextArea textArea3_1_1;
+    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ToggleButtonTrigger > > perfil;
+    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ToggleButtonTrigger > > perfil_2;
+    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ToggleButtonTrigger > > perfil_3;
+    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ToggleButtonTrigger > > perfil_4;
+    touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::TouchButtonTrigger > > clear_button;
 
     /*
      * Wildcard Buffers
@@ -93,11 +138,13 @@ private:
      * Callback Declarations
      */
     touchgfx::Callback<Screen_refusaoViewBase, const touchgfx::AbstractButton&> buttonCallback;
+    touchgfx::Callback<Screen_refusaoViewBase, const touchgfx::AbstractButtonContainer&> flexButtonCallback;
 
     /*
      * Callback Handler Declarations
      */
     void buttonCallbackHandler(const touchgfx::AbstractButton& src);
+    void flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src);
 
     /*
      * Canvas Buffer Size

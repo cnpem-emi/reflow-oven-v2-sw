@@ -1,6 +1,9 @@
-C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/Core/Src/main.c:449:6:SystemClock_Config	1
-C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/Core/Src/main.c:979:7:heatf	2
-C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/Core/Src/main.c:1054:6:HAL_TIM_PeriodElapsedCallback	2
-C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/Core/Src/main.c:1068:6:calculateReflowCurve	7
-C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/Core/Src/main.c:216:5:main	13
-C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/Core/Src/main.c:1143:6:Error_Handler	1
+C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/Core/Src/main.c:460:6:SystemClock_Config	1
+C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/Core/Src/main.c:990:7:heatf	2
+C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/Core/Src/main.c:1065:6:HAL_TIM_PeriodElapsedCallback	2
+C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/Core/Src/main.c:1080:6:calculateReflowCurve	7
+C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/Core/Src/main.c:1150:6:calculateReflowCurve2	7
+C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/Core/Src/main.c:1219:6:calculateReflowCurve3	7
+C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/Core/Src/main.c:1289:6:calculateReflowCurve4	7
+C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/Core/Src/main.c:224:5:main	17
+C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/Core/Src/main.c:1366:6:Error_Handler	1

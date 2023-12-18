@@ -19,13 +19,13 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:touchgfx::TypedText::~TypedText()	1
 ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<Screen_inicializacaoPresenter>::~View()	1
 ../../TouchGFX/generated/gui_generated/include/gui_generated/screen_inicializacao_screen/Screen_inicializacaoViewBase.hpp:19:13:Screen_inicializacaoViewBase::~Screen_inicializacaoViewBase()	1
-C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/TouchGFX/generated/gui_generated/src/screen_inicializacao_screen/Screen_inicializacaoViewBase.cpp:43:6:virtual void Screen_inicializacaoViewBase::setupScreen()	1
-C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/TouchGFX/generated/gui_generated/src/screen_inicializacao_screen/Screen_inicializacaoViewBase.cpp:65:6:virtual void Screen_inicializacaoViewBase::afterTransition()	1
+C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/TouchGFX/generated/gui_generated/src/screen_inicializacao_screen/Screen_inicializacaoViewBase.cpp:49:6:virtual void Screen_inicializacaoViewBase::setupScreen()	1
+C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/TouchGFX/generated/gui_generated/src/screen_inicializacao_screen/Screen_inicializacaoViewBase.cpp:71:6:virtual void Screen_inicializacaoViewBase::afterTransition()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	1
 ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<Screen_inicializacaoPresenter>::~View()	1
 ../../TouchGFX/generated/gui_generated/include/gui_generated/screen_inicializacao_screen/Screen_inicializacaoViewBase.hpp:19:13:virtual Screen_inicializacaoViewBase::~Screen_inicializacaoViewBase()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	2
-C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/TouchGFX/generated/gui_generated/src/screen_inicializacao_screen/Screen_inicializacaoViewBase.cpp:49:6:virtual void Screen_inicializacaoViewBase::handleTickEvent()	3
+C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/TouchGFX/generated/gui_generated/src/screen_inicializacao_screen/Screen_inicializacaoViewBase.cpp:55:6:virtual void Screen_inicializacaoViewBase::handleTickEvent()	3
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:343:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:233:10:void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:36:7:touchgfx::Widget::Widget()	1

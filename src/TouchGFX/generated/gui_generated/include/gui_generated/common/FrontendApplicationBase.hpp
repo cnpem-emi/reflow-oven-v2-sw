@@ -23,11 +23,11 @@ public:
     // Screen_inicializacao
     void gotoScreen_inicializacaoScreenNoTransition();
 
-    // Screen_Configuracao
-    void gotoScreen_ConfiguracaoScreenNoTransition();
-
     // Screen_refusao
     void gotoScreen_refusaoScreenNoTransition();
+
+    // Screen_Configuracao
+    void gotoScreen_ConfiguracaoScreenNoTransition();
 
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
@@ -37,11 +37,11 @@ protected:
     // Screen_inicializacao
     void gotoScreen_inicializacaoScreenNoTransitionImpl();
 
-    // Screen_Configuracao
-    void gotoScreen_ConfiguracaoScreenNoTransitionImpl();
-
     // Screen_refusao
     void gotoScreen_refusaoScreenNoTransitionImpl();
+
+    // Screen_Configuracao
+    void gotoScreen_ConfiguracaoScreenNoTransitionImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

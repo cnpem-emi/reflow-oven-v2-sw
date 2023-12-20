@@ -72,6 +72,6 @@ void Screen_inicializacaoViewBase::afterTransition()
 {
     //Interaction1
     //When screen transition ends delay
-    //Delay for 4000 ms (240 Ticks)
+    //Delay for 150 ms (9 Ticks)
     interaction1Counter = INTERACTION1_DURATION;
 }

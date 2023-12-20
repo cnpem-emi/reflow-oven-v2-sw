@@ -152,14 +152,13 @@ void Screen_refusaoView::profile_4()
 
 }
 
-
-
 void Screen_refusaoView::clear(){
 
 	graph1.clear();
 	graph2.clear();
 	graph3.clear();
 	graph4.clear();
+	variavel_controle = 0;
 
 }
 
@@ -171,21 +170,19 @@ void Screen_refusaoView::startReflow()
 	dynamicGraph1.invalidate();
 
 	cont++;
+
 	if (cont % 2 == 0){
 
 	ReflowEnable = 1;
 
 	//Write "ON" on the display when start button is clicked
-	Unicode::strncpy(textArea2Buffer, "ON", 4);
+	Unicode::strncpy(textArea2Buffer, "LIGADO", 7);
 	textArea2.invalidate();
 	}else{
 		ReflowEnable = 0;
-		Unicode::strncpy(textArea2Buffer, "OFF", 4);
+		Unicode::strncpy(textArea2Buffer, "DESLIGADO", 10);
 		textArea2.invalidate();
 	}
-
-
-
 
 }
 

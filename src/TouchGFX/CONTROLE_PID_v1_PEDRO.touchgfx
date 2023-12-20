@@ -69,7 +69,7 @@
             },
             "Action": {
               "Type": "ActionDelay",
-              "Duration": 4000
+              "Duration": 150
             }
           },
           {
@@ -531,9 +531,9 @@
           {
             "Type": "TextArea",
             "Name": "textArea2",
-            "X": 407,
-            "Y": 68,
-            "Width": 28,
+            "X": 379,
+            "Y": 70,
+            "Width": 83,
             "Height": 16,
             "TextId": "__SingleUse_A9G3",
             "TextRotation": "0",
@@ -545,7 +545,7 @@
             "Wildcard1": {
               "TextId": "__SingleUse_2C0T",
               "UseBuffer": true,
-              "BufferSize": 10
+              "BufferSize": 11
             }
           },
           {
@@ -832,7 +832,7 @@
             "ButtonStyles": [
               {
                 "Type": "TextButtonStyle",
-                "Y": 3,
+                "Y": 4,
                 "TextId": "__SingleUse_1OWB",
                 "TextRotation": "0",
                 "ColorReleased": {

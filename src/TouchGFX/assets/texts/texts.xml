@@ -46,19 +46,19 @@
         <Translation Language="GB">&lt;&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_1OWB" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Clear</Translation>
+        <Translation Language="GB">LIMPAR</Translation>
       </Text>
       <Text Id="__SingleUse_1VLN" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Perfil 4</Translation>
+        <Translation Language="GB">PERFIL 4</Translation>
       </Text>
       <Text Id="__SingleUse_S581" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Perfil 3</Translation>
+        <Translation Language="GB">PERFIL 3</Translation>
       </Text>
       <Text Id="__SingleUse_7YOW" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Perfil 2</Translation>
+        <Translation Language="GB">PERFIL 2</Translation>
       </Text>
       <Text Id="__SingleUse_YC5G" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Perfil 1</Translation>
+        <Translation Language="GB">PERFIL 1</Translation>
       </Text>
       <Text Id="__SingleUse_GLSO" Alignment="Center" TypographyId="Tela_inicial">
         <Translation Language="GB">Eletrônica e Microeletrônica - EMI</Translation>
@@ -79,7 +79,7 @@
         <Translation Language="GB">INFORMAÇÕES</Translation>
       </Text>
       <Text Id="__SingleUse_2C0T" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">OFF</Translation>
+        <Translation Language="GB">DESLIGADO</Translation>
       </Text>
       <Text Id="__SingleUse_A9G3" Alignment="Center" TypographyId="status">
         <Translation Language="GB">&lt;value&gt;</Translation>

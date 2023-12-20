@@ -41,7 +41,7 @@ private:
     /*
      * Delay Variable Declarations
      */
-    static const uint16_t INTERACTION1_DURATION = 240;
+    static const uint16_t INTERACTION1_DURATION = 9;
     uint16_t interaction1Counter;
 
     /*

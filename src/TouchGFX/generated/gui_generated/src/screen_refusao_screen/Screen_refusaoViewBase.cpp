@@ -209,7 +209,7 @@ Screen_refusaoViewBase::Screen_refusaoViewBase() :
     graph4Line1.setLineWidth(3);
     graph4.addGraphElement(graph4Line1);
 
-    textArea2.setXY(407, 68);
+    textArea2.setXY(379, 70);
     textArea2.setColor(touchgfx::Color::getColorFromRGB(0, 112, 19));
     textArea2.setLinespacing(0);
     Unicode::snprintf(textArea2Buffer, TEXTAREA2_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_2C0T).getText());
@@ -278,7 +278,7 @@ Screen_refusaoViewBase::Screen_refusaoViewBase() :
     clear_button.setBorderSize(1);
     clear_button.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(125, 201, 240), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(8, 98, 255), touchgfx::Color::getColorFromRGB(51, 102, 153));
     clear_button.setText(TypedText(T___SINGLEUSE_1OWB));
-    clear_button.setTextPosition(0, 3, 84, 22);
+    clear_button.setTextPosition(0, 4, 84, 22);
     clear_button.setTextColors(touchgfx::Color::getColorFromRGB(10, 10, 10), touchgfx::Color::getColorFromRGB(10, 10, 10));
     clear_button.setPosition(27, 245, 84, 22);
     clear_button.setAction(flexButtonCallback);

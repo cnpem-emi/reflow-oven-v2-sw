@@ -115,7 +115,7 @@ static void MX_TIM1_Init(void);
 static void MX_TIM4_Init(void);
 /* USER CODE BEGIN PFP */
 
-//Declaration of function de to calculate reflow curve
+//Function to calculate reflow curve
  void calculateReflowCurve();
  void calculateReflowCurve2();
  void calculateReflowCurve3();
@@ -175,7 +175,7 @@ typedef struct {
 // Declaration of the "config" structure named ReflowParameters, containing parameters related to reflow process
 config ReflowParameters;
 
-//Array with 4000 elements
+//Array with 4000 elements to each Reflow Curve
 volatile uint8_t ReflowCurve[4000];
 volatile uint8_t ReflowCurve2[4000];
 volatile uint8_t ReflowCurve3[4000];
@@ -184,7 +184,8 @@ volatile uint8_t ReflowCurve4[4000];
 //Variable to store current duty cycle
 float duty;
 
-char setpoint;
+//Set point variable used in pid error
+volatile uint8_t setpoint;
 
 //Variable to store current pid error
 float pid_error;
@@ -193,7 +194,7 @@ float pid_error;
 volatile int teste=0;
 
 //Index variables
-volatile uint16_t ind = 0; //start at 50 to compensate for the oven's inertia
+volatile uint16_t ind = 0;
 volatile uint16_t ind2 = 0;
 volatile uint16_t ind3 = 0;
 volatile uint16_t ind4 = 0;
@@ -233,16 +234,6 @@ int main(void)
 
 
 	if (!(ReflowParameters.version == config_version))	{
-
-			/*
-			ReflowParameters.firstHeatUpRate3 = 0.75;
-			ReflowParameters.SoakTime3 = 100;
-			ReflowParameters.SoakTempeture3 = 175;
-			ReflowParameters.secondHeatUpRate3 = 1;
-			ReflowParameters.ReflowTime3 = 90;
-			ReflowParameters.ReflowTempeture3 = 240;
-            */
-
 
 			// Lead Sn/Pb/Ag 1%  - PROFILE 1
 			ReflowParameters.firstHeatUpRate = 0.6;
@@ -291,8 +282,8 @@ int main(void)
 
 			//KP, Ki, KD by Ziegler-Nichols method (PID classic) to acquisiton time (1500ms) (04.12.2023)
 
-			ReflowParameters.KP = 245;
-			ReflowParameters.Ki = 7.5;
+			ReflowParameters.KP = 242;
+			ReflowParameters.Ki = 7.2;
 			ReflowParameters.KD = 2000;
 
 			//Assign the value of config_version to the version member of the ReflowParameters structure
@@ -300,10 +291,7 @@ int main(void)
 
 		}
 
-	    //Call the function to calculate the reflow curve
-		//calculateReflowCurve();
-
-
+	      //Call the function to calculate the reflow curve
 		  calculateReflowCurve();
 	  	  calculateReflowCurve2();
 	  	  calculateReflowCurve3();
@@ -361,6 +349,7 @@ int main(void)
 
   //Start the PWM signal generation on TIM1, specifically on channel 1
   HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
+
   //Set the capture/compare value for TIM1, channel 1, to 10
   htim1.Instance->CCR1 = 10;
 
@@ -380,36 +369,11 @@ int main(void)
 
   /* USER CODE BEGIN 3 */
 
-
-
-
-
-
-   	  	  	//Logic to find out which stage the system is in at the moment
-   	  	  	if (ReflowIndex == PhaseIndex[0]) {
-  			    teste=1;
-  			}
-  			if (ReflowIndex == PhaseIndex[1]) {
-  				teste=2;
-  			}
-  			if (ReflowIndex == PhaseIndex[2]) {
-  				teste=3;
-  			}
-  			if (ReflowIndex == PhaseIndex[3]) {
-  				teste=4;
-  			}
-  			if (ReflowIndex == PhaseIndex[4]) {
-  			   teste=5;
-  			}
-
-
-
+  	  	  	//Logic to configure which curve will be used in the control
   			if(variavel_controle == 1) setpoint = ReflowCurve[ReflowIndex];
   			if(variavel_controle == 2) setpoint = ReflowCurve2[ReflowIndex];
   			if(variavel_controle == 3) setpoint = ReflowCurve3[ReflowIndex];
   			if(variavel_controle == 4) setpoint = ReflowCurve4[ReflowIndex];
-
-
 
 
    	   if (ReflowEnable == 1) {
@@ -443,12 +407,21 @@ int main(void)
    				if (ReflowIndex == PhaseIndex[4])
    				{
    						ReflowEnable = 0;
+   						//Variable heatVal receives the value in the read function
+   						heatVal = heatf();
+   						//Wait 180ms
+   						HAL_Delay(180);
    				}
    	   }
-   	   else{
+
+   	   if (ReflowEnable == 0){
    		   	   	ReflowIndex = 0;
    				htim1.Instance->CCR1 = 1000;
    				duty = 1000;
+   				//Variable heatVal receives the value in the read function
+   				heatVal = heatf();
+   				//Wait 1500ms
+   				HAL_Delay(180);
 
    			}
    	   }

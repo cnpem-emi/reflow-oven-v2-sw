@@ -8,8 +8,8 @@
 #include <mvp/View.hpp>
 #include <gui/screen_inicializacao_screen/Screen_inicializacaoPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
-#include <touchgfx/widgets/Image.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
+#include <touchgfx/widgets/Image.hpp>
 #include <touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp>
 
 class Screen_inicializacaoViewBase : public touchgfx::View<Screen_inicializacaoPresenter>
@@ -31,17 +31,17 @@ protected:
      */
     touchgfx::Box __background;
     touchgfx::Box box1;
-    touchgfx::Image image1;
     touchgfx::TextArea textArea1;
     touchgfx::TextArea textArea2;
     touchgfx::TextArea textArea3;
+    touchgfx::Image Image3;
 
 private:
 
     /*
      * Delay Variable Declarations
      */
-    static const uint16_t INTERACTION1_DURATION = 9;
+    static const uint16_t INTERACTION1_DURATION = 240;
     uint16_t interaction1Counter;
 
     /*

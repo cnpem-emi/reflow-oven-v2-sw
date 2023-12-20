@@ -22,20 +22,20 @@ touchgfx::Font* ApplicationFontProvider::getFont(touchgfx::FontId typography)
         // arialbd_14_4bpp
         return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[3]);
     case Typography::STATUS:
-        // verdana_14_4bpp
-        return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[4]);
+        // arialbd_14_4bpp
+        return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[3]);
     case Typography::VALORES:
         // ariblk_20_4bpp
-        return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[5]);
+        return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[4]);
     case Typography::TELA_INICIAL:
         // arial_20_4bpp
-        return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[6]);
+        return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[5]);
     case Typography::BOTAO_INICIAR:
         // arialbd_15_4bpp
-        return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[7]);
+        return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[6]);
     case Typography::INFORMACOES:
         // arial_20_4bpp
-        return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[6]);
+        return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[5]);
     default:
         return 0;
     }

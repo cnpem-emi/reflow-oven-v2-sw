@@ -112,7 +112,6 @@ protected:
     touchgfx::GraphElementGridY graph4MajorYAxisGrid;
     touchgfx::GraphLabelsX graph4MajorXAxisLabel;
     touchgfx::GraphLabelsY graph4MajorYAxisLabel;
-    touchgfx::ButtonWithIcon play;
     touchgfx::TextAreaWithOneWildcard textArea2;
     touchgfx::ButtonWithIcon Config;
     touchgfx::TextArea textArea3;
@@ -123,6 +122,7 @@ protected:
     touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ToggleButtonTrigger > > perfil_3;
     touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::ToggleButtonTrigger > > perfil_4;
     touchgfx::TextButtonStyle< touchgfx::BoxWithBorderButtonStyle< touchgfx::TouchButtonTrigger > > clear_button;
+    touchgfx::ButtonWithIcon play;
 
     /*
      * Wildcard Buffers

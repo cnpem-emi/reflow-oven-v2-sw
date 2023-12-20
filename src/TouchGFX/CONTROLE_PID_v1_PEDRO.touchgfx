@@ -18,19 +18,10 @@
             }
           },
           {
-            "Type": "Image",
-            "Name": "image1",
-            "X": 139,
-            "Y": 118,
-            "Width": 202,
-            "Height": 138,
-            "RelativeFilename": "cnpem.png"
-          },
-          {
             "Type": "TextArea",
             "Name": "textArea1",
             "X": 87,
-            "Y": 30,
+            "Y": 27,
             "Width": 306,
             "Height": 44,
             "TextId": "__SingleUse_3GFI",
@@ -41,7 +32,7 @@
             "Type": "TextArea",
             "Name": "textArea2",
             "X": 90,
-            "Y": 85,
+            "Y": 97,
             "Width": 300,
             "Height": 23,
             "TextId": "__SingleUse_GLSO",
@@ -58,6 +49,15 @@
             "TextId": "__SingleUse_3S0Z",
             "TextRotation": "0",
             "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "Image3",
+            "X": 27,
+            "Y": 158,
+            "Width": 427,
+            "Height": 79,
+            "RelativeFilename": "logcnpem1.png"
           }
         ],
         "Interactions": [
@@ -69,7 +69,7 @@
             },
             "Action": {
               "Type": "ActionDelay",
-              "Duration": 150
+              "Duration": 4000
             }
           },
           {
@@ -124,7 +124,7 @@
           {
             "Type": "BoxWithBorder",
             "Name": "boxWithBorder1",
-            "X": 389,
+            "X": 381,
             "Y": 27,
             "Width": 78,
             "Height": 41,
@@ -143,7 +143,7 @@
           {
             "Type": "TextArea",
             "Name": "textArea1",
-            "X": 401,
+            "X": 393,
             "Y": 40,
             "Width": 55,
             "Height": 23,
@@ -291,7 +291,7 @@
               "TextColor": {
                 "Red": 255
               },
-              "TextId": "__SingleUse_YSZ3",
+              "TextId": "__SingleUse_IJNH",
               "TextRotation": "0",
               "Position": "Left"
             },
@@ -368,7 +368,7 @@
               "TextColor": {
                 "Red": 255
               },
-              "TextId": "__SingleUse_FVH2",
+              "TextId": "__SingleUse_XKEO",
               "TextRotation": "0",
               "Position": "Left"
             },
@@ -445,7 +445,7 @@
               "TextColor": {
                 "Red": 255
               },
-              "TextId": "__SingleUse_B5HN",
+              "TextId": "__SingleUse_41JR",
               "TextRotation": "0",
               "Position": "Left"
             },
@@ -522,37 +522,25 @@
               "TextColor": {
                 "Red": 255
               },
-              "TextId": "__SingleUse_RU06",
+              "TextId": "__SingleUse_YOIC",
               "TextRotation": "0",
               "Position": "Left"
             },
             "Moveable": true
           },
           {
-            "Type": "ButtonWithIcon",
-            "Name": "play",
-            "X": 367,
-            "Y": 212,
-            "Width": 60,
-            "Height": 60,
-            "Pressed": "__designer\\Blue_Buttons_Round_icon_button.png",
-            "Released": "__designer\\Blue_Buttons_Round_icon_button.png",
-            "IconPressed": "__designer\\Blue_Icons_Power_32.png",
-            "IconReleased": "__designer\\Blue_Icons_Power_32.png",
-            "IconX": 16,
-            "IconY": 16,
-            "IconHeight": 29,
-            "IconWidth": 29
-          },
-          {
             "Type": "TextArea",
             "Name": "textArea2",
-            "X": 415,
+            "X": 407,
             "Y": 68,
-            "Width": 27,
-            "Height": 17,
+            "Width": 28,
+            "Height": 16,
             "TextId": "__SingleUse_A9G3",
             "TextRotation": "0",
+            "Color": {
+              "Green": 112,
+              "Blue": 19
+            },
             "AutoSize": true,
             "Wildcard1": {
               "TextId": "__SingleUse_2C0T",
@@ -563,7 +551,7 @@
           {
             "Type": "ButtonWithIcon",
             "Name": "Config",
-            "X": 420,
+            "X": 361,
             "Y": 212,
             "Width": 60,
             "Height": 60,
@@ -605,7 +593,7 @@
           {
             "Type": "TextArea",
             "Name": "textArea3_1_1",
-            "X": 383,
+            "X": 376,
             "Y": 10,
             "Width": 89,
             "Height": 13,
@@ -618,7 +606,7 @@
           {
             "Type": "FlexButton",
             "Name": "perfil",
-            "X": 382,
+            "X": 376,
             "Y": 95,
             "Width": 91,
             "Height": 18,
@@ -628,6 +616,7 @@
             "ButtonStyles": [
               {
                 "Type": "TextButtonStyle",
+                "Y": 2,
                 "TextId": "__SingleUse_YC5G",
                 "TextRotation": "0",
                 "ColorReleased": {
@@ -671,7 +660,7 @@
           {
             "Type": "FlexButton",
             "Name": "perfil_2",
-            "X": 382,
+            "X": 376,
             "Y": 123,
             "Width": 91,
             "Height": 18,
@@ -681,6 +670,7 @@
             "ButtonStyles": [
               {
                 "Type": "TextButtonStyle",
+                "Y": 2,
                 "TextId": "__SingleUse_7YOW",
                 "TextRotation": "0",
                 "ColorReleased": {
@@ -724,8 +714,8 @@
           {
             "Type": "FlexButton",
             "Name": "perfil_3",
-            "X": 383,
-            "Y": 153,
+            "X": 376,
+            "Y": 150,
             "Width": 91,
             "Height": 18,
             "ButtonTrigger": {
@@ -734,6 +724,7 @@
             "ButtonStyles": [
               {
                 "Type": "TextButtonStyle",
+                "Y": 2,
                 "TextId": "__SingleUse_S581",
                 "TextRotation": "0",
                 "ColorReleased": {
@@ -777,8 +768,8 @@
           {
             "Type": "FlexButton",
             "Name": "perfil_4",
-            "X": 383,
-            "Y": 184,
+            "X": 376,
+            "Y": 175,
             "Width": 91,
             "Height": 18,
             "ButtonTrigger": {
@@ -787,6 +778,7 @@
             "ButtonStyles": [
               {
                 "Type": "TextButtonStyle",
+                "Y": 2,
                 "TextId": "__SingleUse_1VLN",
                 "TextRotation": "0",
                 "ColorReleased": {
@@ -830,16 +822,17 @@
           {
             "Type": "FlexButton",
             "Name": "clear_button",
-            "X": 29,
-            "Y": 250,
-            "Width": 91,
-            "Height": 18,
+            "X": 27,
+            "Y": 245,
+            "Width": 84,
+            "Height": 22,
             "ButtonTrigger": {
               "Type": "TouchButtonTrigger"
             },
             "ButtonStyles": [
               {
                 "Type": "TextButtonStyle",
+                "Y": 3,
                 "TextId": "__SingleUse_1OWB",
                 "TextRotation": "0",
                 "ColorReleased": {
@@ -855,8 +848,8 @@
               },
               {
                 "Type": "BoxWithBorderButtonStyle",
-                "Width": 91,
-                "Height": 18,
+                "Width": 84,
+                "Height": 22,
                 "LockToFlexButtonSize": true,
                 "BorderSize": 1,
                 "ColorReleased": {
@@ -880,6 +873,22 @@
                 }
               }
             ]
+          },
+          {
+            "Type": "ButtonWithIcon",
+            "Name": "play",
+            "X": 418,
+            "Y": 212,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Round_Edge_icon_button.png",
+            "Released": "__designer\\Blue_Buttons_Round_Edge_icon_button.png",
+            "IconPressed": "__designer\\Blue_Icons_Play_48.png",
+            "IconReleased": "__designer\\Blue_Icons_Play_48.png",
+            "IconX": 16,
+            "IconY": 7,
+            "IconHeight": 44,
+            "IconWidth": 31
           }
         ],
         "Interactions": [
@@ -997,6 +1006,20 @@
             "IconY": 15,
             "IconHeight": 30,
             "IconWidth": 17
+          },
+          {
+            "Type": "Box",
+            "Name": "box2",
+            "X": 14,
+            "Y": 45,
+            "Width": 448,
+            "Height": 148,
+            "Color": {
+              "Red": 69,
+              "Green": 133,
+              "Blue": 196
+            },
+            "Alpha": 162
           },
           {
             "Type": "TextArea",

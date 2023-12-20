@@ -19,7 +19,7 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:touchgfx::TypedText::~TypedText()	1
 ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<Screen_ConfiguracaoPresenter>::~View()	1
 ../../TouchGFX/generated/gui_generated/include/gui_generated/screen_configuracao_screen/Screen_ConfiguracaoViewBase.hpp:18:13:Screen_ConfiguracaoViewBase::~Screen_ConfiguracaoViewBase()	1
-C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/TouchGFX/generated/gui_generated/src/screen_configuracao_screen/Screen_ConfiguracaoViewBase.cpp:65:6:virtual void Screen_ConfiguracaoViewBase::setupScreen()	1
+C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/TouchGFX/generated/gui_generated/src/screen_configuracao_screen/Screen_ConfiguracaoViewBase.cpp:70:6:virtual void Screen_ConfiguracaoViewBase::setupScreen()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<Screen_ConfiguracaoViewBase, const touchgfx::AbstractButton&>::~Callback()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = Screen_ConfiguracaoViewBase; T1 = const touchgfx::AbstractButton&]	2
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = Screen_ConfiguracaoViewBase; T1 = const touchgfx::AbstractButton&]	3
@@ -28,7 +28,7 @@ C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/TouchGFX
 ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<Screen_ConfiguracaoPresenter>::~View()	1
 ../../TouchGFX/generated/gui_generated/include/gui_generated/screen_configuracao_screen/Screen_ConfiguracaoViewBase.hpp:18:13:virtual Screen_ConfiguracaoViewBase::~Screen_ConfiguracaoViewBase()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	2
-C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/TouchGFX/generated/gui_generated/src/screen_configuracao_screen/Screen_ConfiguracaoViewBase.cpp:70:6:void Screen_ConfiguracaoViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	2
+C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/TouchGFX/generated/gui_generated/src/screen_configuracao_screen/Screen_ConfiguracaoViewBase.cpp:75:6:void Screen_ConfiguracaoViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	2
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:343:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:233:10:void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:33:5:touchgfx::Box::Box()	1

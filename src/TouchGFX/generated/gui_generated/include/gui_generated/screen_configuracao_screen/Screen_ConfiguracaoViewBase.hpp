@@ -29,6 +29,7 @@ protected:
     touchgfx::Box __background;
     touchgfx::Box box1;
     touchgfx::ButtonWithIcon retornar;
+    touchgfx::Box box2;
     touchgfx::TextArea textArea1;
     touchgfx::TextArea textArea2;
     touchgfx::TextArea textArea2_1;

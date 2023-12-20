@@ -193,13 +193,15 @@ float pid_error;
 volatile int teste=0;
 
 //Index variables
-volatile uint16_t ind = 15; //start at 50 to compensate for the oven's inertia
-volatile uint16_t ind2 = 15;
-volatile uint16_t ind3 = 15;
-volatile uint16_t ind4 = 15;
+volatile uint16_t ind = 0; //start at 50 to compensate for the oven's inertia
+volatile uint16_t ind2 = 0;
+volatile uint16_t ind3 = 0;
+volatile uint16_t ind4 = 0;
 
 //Control variable to Calculate Reflow curve
 volatile uint8_t variavel_controle = 0;
+
+volatile uint8_t cont = 1;
 
 // Declaration of an ARM floating-point PID controller instance named PID
 arm_pid_instance_f32 PID;
@@ -212,6 +214,9 @@ volatile uint16_t ReflowIndex = 0;
 
 //Control variable for process steps
 volatile uint16_t PhaseIndex[5]={0};
+volatile uint16_t PhaseIndex2[5]={0};
+volatile uint16_t PhaseIndex3[5]={0};
+volatile uint16_t PhaseIndex4[5]={0};
 
 
 /* USER CODE END 0 */
@@ -248,7 +253,7 @@ int main(void)
 			ReflowParameters.ReflowTempeture = 230;
 
 			// Sn63/Pb37 - https://www.chipquik.com/datasheets/TS391AX50.pdf - PROFILE 2
-			ReflowParameters.firstHeatUpRate2 = 0.75;
+			ReflowParameters.firstHeatUpRate2 = 0.6;
 			ReflowParameters.SoakTime2 = 100;
 			ReflowParameters.SoakTempeture2 = 150;
 			ReflowParameters.secondHeatUpRate2 = 0.6;
@@ -256,15 +261,15 @@ int main(void)
 			ReflowParameters.ReflowTempeture2 = 230;
 
 			// Sn96.5/Ag3.0/Cu0.5 - https://www.chipquik.com/datasheets/TS991SNL35T4.pdf - PROFILE 3
-			ReflowParameters.firstHeatUpRate3 = 0.75;
+			ReflowParameters.firstHeatUpRate3 = 0.6;
 			ReflowParameters.SoakTime3 = 100;
 			ReflowParameters.SoakTempeture3 = 175;
-			ReflowParameters.secondHeatUpRate3 = 0.75;
+			ReflowParameters.secondHeatUpRate3 = 0.6;
 			ReflowParameters.ReflowTime3 = 100;
 			ReflowParameters.ReflowTempeture3 = 240;
 
 			// Sn42/Bi57.6/Ag0.4 - http://www.chipquik.com/datasheets/TS391LT50.pdf - PROFILE 4
-			ReflowParameters.firstHeatUpRate4 = 0.75;
+			ReflowParameters.firstHeatUpRate4 = 0.6;
 			ReflowParameters.SoakTime4 = 100;
 			ReflowParameters.SoakTempeture4 = 130;
 			ReflowParameters.secondHeatUpRate4 = 0.6;
@@ -286,8 +291,8 @@ int main(void)
 
 			//KP, Ki, KD by Ziegler-Nichols method (PID classic) to acquisiton time (1500ms) (04.12.2023)
 
-			ReflowParameters.KP = 240;
-			ReflowParameters.Ki = 7.2;
+			ReflowParameters.KP = 245;
+			ReflowParameters.Ki = 7.5;
 			ReflowParameters.KD = 2000;
 
 			//Assign the value of config_version to the version member of the ReflowParameters structure
@@ -376,15 +381,9 @@ int main(void)
   /* USER CODE BEGIN 3 */
 
 
-  	  //if (variavel_controle = 3) calculateReflowCurve3();
-  	  //if (variavel_controle = 4) calculateReflowCurve4();
 
 
 
-  	  //Variable heatVal receives the value in the read function
-  	  heatVal = heatf();
-  	  //Wait 1500ms
-   	  HAL_Delay(500);
 
    	  	  	//Logic to find out which stage the system is in at the moment
    	  	  	if (ReflowIndex == PhaseIndex[0]) {
@@ -414,6 +413,11 @@ int main(void)
 
 
    	   if (ReflowEnable == 1) {
+
+   		   	  //Variable heatVal receives the value in the read function
+   		  	  heatVal = heatf();
+   		  	  //Wait 1500ms
+   		   	  HAL_Delay(1500);
 
    		   	    //Proportional error subtracted from the current heat value (heatVal) of the setpoint
    				pid_error = setpoint - heatVal;
@@ -1166,7 +1170,7 @@ void calculateReflowCurve2()
 	timestep = timestep + 0.5;
 	}
 
-	PhaseIndex[1]=ind2;
+	PhaseIndex2[1]=ind2;
 
 	//Soak
 	int Soakduration = ReflowParameters.SoakTime2;
@@ -1177,7 +1181,7 @@ void calculateReflowCurve2()
 
 	//Second Heat Up
 	ind2 = ind2 + Soakduration;
-	PhaseIndex[2]=ind2;
+	PhaseIndex2[2]=ind2;
 	timestep = 0.5;
 
 	while (ReflowParameters.SoakTempeture2 + timestep * ReflowParameters.secondHeatUpRate2 <= ReflowParameters.ReflowTempeture2)
@@ -1187,7 +1191,7 @@ void calculateReflowCurve2()
 	timestep = timestep + 0.5;
 	}
 
-	PhaseIndex[3]=ind2;
+	PhaseIndex2[3]=ind2;
 
 
 	//Reflow
@@ -1201,7 +1205,7 @@ void calculateReflowCurve2()
 	ind2 = ind2 + Reflowduration;
 	ReflowCurve2[ind2]=0;
 
-	PhaseIndex[4]=ind2;
+	PhaseIndex2[4]=ind2;
 
 
 	//Cooldown
@@ -1235,7 +1239,7 @@ void calculateReflowCurve3()
 	timestep = timestep + 0.5;
 	}
 
-	PhaseIndex[1]=ind3;
+	PhaseIndex3[1]=ind3;
 
 	//Soak
 	int Soakduration = ReflowParameters.SoakTime3;
@@ -1246,7 +1250,7 @@ void calculateReflowCurve3()
 
 	//Second Heat Up
 	ind3 = ind3 + Soakduration;
-	PhaseIndex[2]=ind3;
+	PhaseIndex3[2]=ind3;
 	timestep = 0.5;
 
 	while (ReflowParameters.SoakTempeture3 + timestep * ReflowParameters.secondHeatUpRate3 <= ReflowParameters.ReflowTempeture3)
@@ -1256,7 +1260,7 @@ void calculateReflowCurve3()
 	timestep = timestep + 0.5;
 	}
 
-	PhaseIndex[3]=ind3;
+	PhaseIndex3[3]=ind3;
 
 
 	//Reflow
@@ -1270,7 +1274,7 @@ void calculateReflowCurve3()
 	ind3 = ind3 + Reflowduration;
 	ReflowCurve3[ind3]=0;
 
-	PhaseIndex[4]=ind3;
+	PhaseIndex3[4]=ind3;
 
 
 	//Cooldown
@@ -1305,7 +1309,7 @@ void calculateReflowCurve4()
 	timestep = timestep + 0.5;
 	}
 
-	PhaseIndex[1]=ind4;
+	PhaseIndex4[1]=ind4;
 
 	//Soak
 	int Soakduration = ReflowParameters.SoakTime4;
@@ -1316,7 +1320,7 @@ void calculateReflowCurve4()
 
 	//Second Heat Up
 	ind4 = ind4 + Soakduration;
-	PhaseIndex[2]=ind4;
+	PhaseIndex4[2]=ind4;
 	timestep = 0.5;
 
 	while (ReflowParameters.SoakTempeture4 + timestep * ReflowParameters.secondHeatUpRate4 <= ReflowParameters.ReflowTempeture4)
@@ -1326,7 +1330,7 @@ void calculateReflowCurve4()
 	timestep = timestep + 0.5;
 	}
 
-	PhaseIndex[3]=ind4;
+	PhaseIndex4[3]=ind4;
 
 
 	//Reflow
@@ -1340,7 +1344,7 @@ void calculateReflowCurve4()
 	ind4 = ind4 + Reflowduration;
 	ReflowCurve4[ind4]=0;
 
-	PhaseIndex[4]=ind4;
+	PhaseIndex4[4]=ind4;
 
 
 	//Cooldown

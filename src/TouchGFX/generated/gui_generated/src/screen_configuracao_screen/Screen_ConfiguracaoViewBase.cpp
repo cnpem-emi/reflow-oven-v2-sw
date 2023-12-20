@@ -21,6 +21,10 @@ Screen_ConfiguracaoViewBase::Screen_ConfiguracaoViewBase() :
     retornar.setIconXY(20, 15);
     retornar.setAction(buttonCallback);
 
+    box2.setPosition(14, 45, 448, 148);
+    box2.setColor(touchgfx::Color::getColorFromRGB(69, 133, 196));
+    box2.setAlpha(162);
+
     textArea1.setPosition(156, 11, 169, 34);
     textArea1.setColor(touchgfx::Color::getColorFromRGB(12, 157, 235));
     textArea1.setLinespacing(0);
@@ -54,6 +58,7 @@ Screen_ConfiguracaoViewBase::Screen_ConfiguracaoViewBase() :
     add(__background);
     add(box1);
     add(retornar);
+    add(box2);
     add(textArea1);
     add(textArea2);
     add(textArea2_1);

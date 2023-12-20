@@ -1,2 +1,2 @@
-C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/TouchGFX/generated/images/src/BitmapDatabase.cpp:23:37:const touchgfx::Bitmap::BitmapData* BitmapDatabase::getInstance()	0	static
-C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/TouchGFX/generated/images/src/BitmapDatabase.cpp:28:10:uint16_t BitmapDatabase::getInstanceSize()	0	static
+C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/TouchGFX/generated/images/src/BitmapDatabase.cpp:29:37:const touchgfx::Bitmap::BitmapData* BitmapDatabase::getInstance()	0	static
+C:/Users/pedro.mamud/Desktop/Pedro_EMI/Gits_Pedro/reflow-oven-v2-sw/src/TouchGFX/generated/images/src/BitmapDatabase.cpp:34:10:uint16_t BitmapDatabase::getInstanceSize()	0	static

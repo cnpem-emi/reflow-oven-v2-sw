@@ -329,11 +329,6 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Font_calibrib_36_4bpp_0.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/generated/Font_verdana_14_4bpp_0.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Font_verdana_14_4bpp_0.cpp</locationURI>
-		</link>
-		<link>
 			<name>Application/User/generated/GeneratedFont.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/GeneratedFont.cpp</locationURI>
@@ -374,11 +369,6 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Kerning_calibrib_36_4bpp.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/generated/Kerning_verdana_14_4bpp.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Kerning_verdana_14_4bpp.cpp</locationURI>
-		</link>
-		<link>
 			<name>Application/User/generated/Table_arial_20_4bpp.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Table_arial_20_4bpp.cpp</locationURI>
@@ -414,11 +404,6 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Table_calibrib_36_4bpp.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/generated/Table_verdana_14_4bpp.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Table_verdana_14_4bpp.cpp</locationURI>
-		</link>
-		<link>
 			<name>Application/User/generated/UnmappedDataFont.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/UnmappedDataFont.cpp</locationURI>
@@ -449,6 +434,11 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/BitmapDatabase.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/image_Blue_Buttons_Round_Edge_icon_button.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_Edge_icon_button.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/image_Blue_Buttons_Round_icon_button.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__designer/image_Blue_Buttons_Round_icon_button.cpp</locationURI>
@@ -464,14 +454,24 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__designer/image_Blue_Icons_Info_32.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/generated/image_Blue_Icons_Power_32.cpp</name>
+			<name>Application/User/generated/image_Blue_Icons_Play_48.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__designer/image_Blue_Icons_Power_32.cpp</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__designer/image_Blue_Icons_Play_48.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/image_cnpem.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_cnpem.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_logcnpem.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_logcnpem.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_logcnpem1.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_logcnpem1.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/LanguageGb.cpp</name>

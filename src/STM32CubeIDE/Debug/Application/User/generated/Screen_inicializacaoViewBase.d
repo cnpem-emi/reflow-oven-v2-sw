@@ -43,15 +43,15 @@ Application/User/generated/Screen_inicializacaoViewBase.o: \
  ../../TouchGFX/gui/include/gui/model/ModelListener.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Cell.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
- ../../TouchGFX/generated/images/include/BitmapDatabase.hpp \
- ../../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp
+ ../../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp \
+ ../../TouchGFX/generated/images/include/BitmapDatabase.hpp
 ../../TouchGFX/generated/gui_generated/include/gui_generated/screen_inicializacao_screen/Screen_inicializacaoViewBase.hpp:
 ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
 ../../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:
@@ -95,12 +95,12 @@ Application/User/generated/Screen_inicializacaoViewBase.o: \
 ../../TouchGFX/gui/include/gui/model/ModelListener.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Cell.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
-../../TouchGFX/generated/images/include/BitmapDatabase.hpp:
 ../../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp:
+../../TouchGFX/generated/images/include/BitmapDatabase.hpp:

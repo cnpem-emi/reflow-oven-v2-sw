@@ -21,7 +21,7 @@ public:
     virtual void startReflow();
 
     volatile int ReflowIndex=0;
-    volatile int PhaseIndex[5]={0};
+
 
 
 
@@ -29,10 +29,12 @@ public:
 protected:
 
 
-         volatile uint16_t ind = 15;
-         volatile uint16_t ind2 = 15;
-         volatile uint16_t ind3 = 15;
-         volatile uint16_t ind4 = 15;
+         volatile uint16_t ind = 0;
+         volatile uint16_t ind2 = 0;
+         volatile uint16_t ind3 = 0;
+         volatile uint16_t ind4 = 0;
+
+         uint8_t cont = 1;
 
 
 };

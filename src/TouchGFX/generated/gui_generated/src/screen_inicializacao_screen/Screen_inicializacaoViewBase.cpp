@@ -3,8 +3,8 @@
 /*********************************************************************************/
 #include <gui_generated/screen_inicializacao_screen/Screen_inicializacaoViewBase.hpp>
 #include <touchgfx/Color.hpp>
-#include <BitmapDatabase.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
+#include <BitmapDatabase.hpp>
 #include <touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp>
 
 
@@ -20,15 +20,12 @@ Screen_inicializacaoViewBase::Screen_inicializacaoViewBase() :
     box1.setPosition(0, 0, 480, 272);
     box1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
 
-    image1.setXY(139, 118);
-    image1.setBitmap(touchgfx::Bitmap(BITMAP_CNPEM_ID));
-
-    textArea1.setXY(87, 30);
+    textArea1.setXY(87, 27);
     textArea1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea1.setLinespacing(0);
     textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_3GFI));
 
-    textArea2.setXY(90, 85);
+    textArea2.setXY(90, 97);
     textArea2.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     textArea2.setLinespacing(0);
     textArea2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_GLSO));
@@ -38,12 +35,15 @@ Screen_inicializacaoViewBase::Screen_inicializacaoViewBase() :
     textArea3.setLinespacing(0);
     textArea3.setTypedText(touchgfx::TypedText(T___SINGLEUSE_3S0Z));
 
+    Image3.setXY(27, 158);
+    Image3.setBitmap(touchgfx::Bitmap(BITMAP_LOGCNPEM1_ID));
+
     add(__background);
     add(box1);
-    add(image1);
     add(textArea1);
     add(textArea2);
     add(textArea3);
+    add(Image3);
 }
 
 void Screen_inicializacaoViewBase::setupScreen()
@@ -72,6 +72,6 @@ void Screen_inicializacaoViewBase::afterTransition()
 {
     //Interaction1
     //When screen transition ends delay
-    //Delay for 150 ms (9 Ticks)
+    //Delay for 4000 ms (240 Ticks)
     interaction1Counter = INTERACTION1_DURATION;
 }
